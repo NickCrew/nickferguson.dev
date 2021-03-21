@@ -1,0 +1,13 @@
+baseURL = "http://example.org/"
+languageCode = "en-us"
+theme = "lanyon-hugo"
+pygmentsuseclasses = "true"
+
+[params]
+	Title = "Nick's Blog"
+	Description = "May I present... DragonOps."
+	Author = "Nick Ferguson"
+	Tagline = "It works on my machine."
+	Copyright = "2022 Nick Ferguson"
+	DateForm = "Jan 2 2006"
+
