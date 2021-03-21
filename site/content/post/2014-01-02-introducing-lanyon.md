@@ -7,6 +7,10 @@ Lanyon is an unassuming [Jekyll](http://jekyllrb.com) theme that places content 
 
 ### Built on Poole
 
+````powershell
+write-output 'foo'
+````
+
 Poole is the Jekyll Butler, serving as an upstanding and effective foundation for Jekyll themes by [@mdo](https://twitter.com/mdo). Poole, and every theme built on it (like Lanyon here) includes the following:
 
 * Complete Jekyll setup included (layouts, config, [404](/404), [RSS feed](/index.xml), posts, and [example page](/about))

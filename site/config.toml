@@ -5,9 +5,19 @@ pygmentsuseclasses = "true"
 
 [params]
 	Title = "Nick's Blog"
-	Description = "May I present... DragonOps."
+	Description = "Get ready for... DragonOps."
 	Author = "Nick Ferguson"
 	Tagline = "It works on my machine."
-	Copyright = "2022 Nick Ferguson"
+	Copyright = "2021 Nick Ferguson"
 	DateForm = "Jan 2 2006"
 
+
+[menu]
+[[menu.main]]
+	identifier = "categories"
+	name = "Categories"
+	title = "Categories"
+	url = "/categories/"
+	weight = -110
+
+	
