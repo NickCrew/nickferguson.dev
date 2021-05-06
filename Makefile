@@ -17,7 +17,7 @@ install_hugo:
 	dpkg -i /tmp/hugo_$(HUGO_VERSION).deb
 
 serve:
-	hugo server --source "$(SRCDIR)"
+	systemctl restart nicksblog.service
 
 stage_serve:
 	hugo server --port $(PORT) --bind=$(STAGING_ADDR) --baseURL=$(STAGING_URL) --source="$(SRCDIR)"

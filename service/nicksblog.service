@@ -1,0 +1,13 @@
+# /etc/systemd/system/nicksblog.service
+
+[Unit]
+Description=Hugo server for Nick's blog
+
+[Service]
+User=root
+WorkingDirectory=/var/local/nicksblog/site
+ExecStart=hugo server
+Restart=always
+
+[Install]
+WantedBy=multi-user.target
