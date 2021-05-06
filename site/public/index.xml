@@ -1,0 +1,130 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title> </title>
+    <link>http://example.org/</link>
+    <language>en-us</language>
+    <author>Nick Ferguson</author>
+    <rights>(C) 2021</rights>
+    <updated>2021-04-21 00:00:00 &#43;0000 UTC</updated>
+
+    
+      <item>
+        <title>How To Learn Linux</title>
+        <link>http://example.org/post/2021-04-21-how-to-learn-linux/</link>
+        <pubDate>Wed, 21 Apr 2021 00:00:00 UTC</pubDate>
+        <author>Nick Ferguson</author>
+        <guid>http://example.org/post/2021-04-21-how-to-learn-linux/</guid>
+        <description>&lt;p&gt;I often see the question &amp;lsquo;How do I learn Linux?&amp;rsquo;. It is usually from those who do not have access to professional work involving Linux. This is how I got start with Linux as a kid and how I usually respond to this question.&lt;/p&gt;
+&lt;hr&gt;
+&lt;h2 id=&#34;what-do-i-do-with-it&#34;&gt;What Do I Do With It?&lt;/h2&gt;
+&lt;p&gt;Most people with any professional IT experience will tell you that your learning is accelerated considerably on the job. This is because you are spending at least a solid 40 hours a week dedicated to it, you probably have tasks which require you to persevere even when you&amp;rsquo;re stumped and those tasks solve the problem of &amp;lsquo;Well, what should I learn?&amp;rsquo;.&lt;/p&gt;
+&lt;p&gt;The most common answer to this question that I see from other is something along the lines of &amp;lsquo;Spin up a VM, install Ubuntu and play around&amp;rsquo;.&lt;/p&gt;
+&lt;p&gt;I think this is bad advice when the goal is something general like &amp;lsquo;learning Linux&amp;rsquo;. The reason is that it is pretty painless to install Linux these days and once the installation is complete the user is not going to know what to do next in pursuit of their goal.&lt;/p&gt;
+&lt;p&gt;Linux is used to do things: host web sites, run software, power a workstation, etc.&lt;/p&gt;
+&lt;p&gt;Without something to do, the job is over once the installation is complete. Congratulations, you now have a Linux VM.&lt;/p&gt;
+&lt;p&gt;If you have a web site or app that needs hosting, I would suggest you start with that. Otherwise, read on.&lt;/p&gt;
+&lt;h2 id=&#34;desktop-linux&#34;&gt;Desktop Linux&lt;/h2&gt;
+&lt;p&gt;My first experience with Linux was Ubuntu 5.10 Breezy Badger. I was 13 and my only motivation was that Linux is what the cool kids were using and I wanted to be a cool kid too. Ubuntu was a bit of a revolution for the desktop space because it was so user-friendly. Still, as human-friendly as it was, it was common after an install to be greeted with: - Display resolution stuck at 800x600 - No audio and missing media codecs (couldn&amp;rsquo;t play mp3 and other non-free formats) - No WiFi (maybe no Ethernet either) - Graphics card driver problems - Many other possibilities depending on your hardware.&lt;/p&gt;
+&lt;p&gt;So right away you had a decent list of things to fix and this is usually where your journey into the user forums and documentation began and what would give your first taste of that little hit of joy one experiences when you finally get something to work.&lt;/p&gt;
+&lt;p&gt;Today, almost everything on that list is a non-issue when using mainstream distributions like Ubuntu. While this is doubtlessly a positive advancement, it does remove some of the opportunities to get down and dirty for new users.&lt;/p&gt;
+&lt;p&gt;Nevertheless, I believe that using desktop Linux as your &amp;ldquo;daily driver&amp;rdquo; workstation operating system is the best way to get familiar with Linux as a new user.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&amp;ldquo;I Believe that using desktop Linux as your &amp;ldquo;daily driver&amp;rdquo; workstation operating system is the best way to get familiar with Linux&amp;rdquo;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;When you are using Linux as your workstation OS, you will: - Encounter many opportunities to delve deeper as you attempt to find solutions for all of your day-to-day needs. - Discover the documentation and community sites that are relied on by everyone, including professionals. Through these sites you will see what other users are doing with their desktop Linux setups and become inspired - Be more likely to spontaneously explore the system - Become familiar with basic terminal usage, file system hierarchy, terminology and general &amp;lsquo;philosophy&amp;rsquo;&lt;/p&gt;
+&lt;p&gt;At some point you will get the urge to &amp;lsquo;distro hop&amp;rsquo;. This is where you, somewhat manically, try out new Linux distributions in search of a sort of holy grail. When you reach this state, I would encourage you to try &amp;lsquo;harder&amp;rsquo; distributions, such as Arch Linux, Gentoo or even Linux From Scratch. Ubuntu provides a nice friendly introduction but there are other distributions for more advanced users that will have you much closer to the system and place more responsibility on you as the administrator.&lt;/p&gt;
+&lt;h2 id=&#34;conclusion&#34;&gt;Conclusion&lt;/h2&gt;
+&lt;p&gt;Be brave and install Linux to disk with the commitment that you will use it everyday for as much as possible. Windows (if you need it) is the one that should be virtualized or kept on a separate partition for dual booting.&lt;/p&gt;
+&lt;p&gt;When you do start working with Linux professionally you will find that Desktop Linux is quite rare, with most of the action happening on Linux servers that only provide command-line access. That is ok because it is still the same Linux and the system knowledge you gained as a desktop user will still be applicable. I would encourage you to make friends with the terminal early-on in your desktop adventures, as this is the direct path to the heart of a Linux system.&lt;/p&gt;
+</description>
+      </item>
+    
+      <item>
+        <title>Foreman and FreeIPA Realm Integration</title>
+        <link>http://example.org/post/2021-04-10-foreman-freeipa/</link>
+        <pubDate>Sat, 10 Apr 2021 00:00:00 UTC</pubDate>
+        <author>Nick Ferguson</author>
+        <guid>http://example.org/post/2021-04-10-foreman-freeipa/</guid>
+        <description>&lt;p&gt;A configuration by which  hosts created with Foreman auto-join your FreeIPA Realm and registered as IPA hosts&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Note: This guide was originally written to target Redhat 7&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;freeipa-host&#34;&gt;FreeIPA Host&lt;/h3&gt;
+&lt;p&gt;We need to create an IPA user for foreman. I used &lt;em&gt;&amp;ldquo;foreman-user&amp;rdquo;&lt;/em&gt; but you can choose something different if you&amp;rsquo;d like. This article will assume &lt;em&gt;&amp;ldquo;foreman-user&amp;rdquo;&lt;/em&gt;. Avoid foreman-proxy or other usernames that occur as users on the Foreman host. Assign this user the &lt;strong&gt;role&lt;/strong&gt; of &lt;em&gt;Smart Proxy Host Manager&lt;/em&gt;.&lt;/p&gt;
+&lt;p&gt;Before beginning, your Foreman host needs to be registered as an IPA host.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ ipa-client-install
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;We need to create a &lt;strong&gt;service&lt;/strong&gt; for the Foreman proxy.&lt;/p&gt;
+&lt;p&gt;If you&amp;rsquo;re using the FreeIPA webui:&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Identity&lt;/em&gt; =&amp;gt; &lt;em&gt;Services&lt;/em&gt; =&amp;gt; &lt;em&gt;&amp;ldquo;add +&amp;quot;&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4 id=&#34;example&#34;&gt;Example&lt;/h4&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;a href=&#34;mailto:foremanproxy/foreman.example.com@EXAMPLE.COM&#34;&gt;foremanproxy/foreman.example.com@EXAMPLE.COM&lt;/a&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;hr&gt;
+&lt;h3 id=&#34;foreman-host&#34;&gt;Foreman Host&lt;/h3&gt;
+&lt;p&gt;You need to install the &lt;code&gt;ipa-admintools&lt;/code&gt; package:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ yum install ipa-admintools
+$ foreman-prepare-realm admin foreman-user
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Now we need to edit some config files.&lt;/p&gt;
+&lt;h5 id=&#34;etcforeman-proxysettingsdfreeipa_realmyml&#34;&gt;&lt;em&gt;/etc/foreman-proxy/settings.d/freeipa_realm.yml&lt;/em&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /etc/foreman-proxy/settings.d/freeipa_realm.yml&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Authentication for Kerberos-based Realms&lt;/span&gt;
+:keytab_path: /etc/foreman-proxy/freeipa.keytab
+:principal: foreman-user@EXAMPLE.COM
+
+:ipa_config: /etc/ipa/default.conf
+&lt;span class=&#34;c1&#34;&gt;# Remove from DNS when deleting the FreeIPA entry&lt;/span&gt;
+:remove_dns: &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;h5 id=&#34;etcforeman-proxysettingsdrealmyml&#34;&gt;&lt;em&gt;/etc/foreman-proxy/settings.d/realm.yml&lt;/em&gt;&lt;/h5&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;&lt;span class=&#34;c1&#34;&gt;# /etc/foreman-proxy/settings.d/realm.yml&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Can be true, false, or http/https to enable just one of the protocols&lt;/span&gt;
+:enabled: &lt;span class=&#34;nb&#34;&gt;true&lt;/span&gt;
+
+&lt;span class=&#34;c1&#34;&gt;# Available providers:&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#   realm_ad&lt;/span&gt;
+&lt;span class=&#34;c1&#34;&gt;#   realm_freeipa&lt;/span&gt;
+:use_provider: realm_freeipa
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;hr&gt;
+&lt;h3 id=&#34;freeipa-host-1&#34;&gt;FreeIPA Host&lt;/h3&gt;
+&lt;p&gt;Copy the keytab from the IPA server, where &lt;em&gt;freeipa&lt;/em&gt; is the hostname of your IPA server and &lt;em&gt;foremanproxy&lt;/em&gt; is the name of the service:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ ipa-getkeytab -s freeipa.example.com -p foremanproxy/freeipa.example.com -k /etc/krb5.keytab *
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Copy the keytab to the appropriate location.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ cp freeipa.keytab /etc/foreman-proxy/freeipa.keyab
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Make the foreman-proxy user owner and set correct permissions.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;$ chown foreman-proxy /etc/foreman-proxy/freeipa.leytab
+$ chmod 600 /etc/foreman-proxy/freeipa.keytab
+$ cp /etc/ipa/ca.crt /etc/pki/ca-trust/source/anchors/ipa.crt
+$ update-ca-trust enable &amp;amp;&amp;amp; update-ca-trust
+$ systemctl restart foreman-proxy
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;Test the keytab is present.&lt;/p&gt;
+&lt;div class=&#34;highlight&#34;&gt;&lt;pre class=&#34;chroma&#34;&gt;&lt;code class=&#34;language-bash&#34; data-lang=&#34;bash&#34;&gt;$ sudo -u foreman-user kinit -k -t /etc/foreman-proxy/freeipa.keytab foreman-user
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;p&gt;You should now be able to select your realm in the Foreman webui&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;em&gt;Infrastructure&lt;/em&gt; =&amp;gt; &lt;em&gt;Realms&lt;/em&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Ensure your provisioning template calls the &lt;code&gt;freeipa_register&lt;/code&gt; snippet. Read over the snippet to see optional host parameters you may set.&lt;/p&gt;
+&lt;p&gt;&lt;em&gt;If you are using FreeIPA as your DNS server and you would like the records automatically updated, set the following host parameter:&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Name: &lt;/code&gt;freeipa_opts Value: Î-enable-dns-updates`&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;&lt;em&gt;If you are using the automount feature of FreeIPA:&lt;/em&gt;&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;&lt;code&gt;Name: freeipa_automount Value: true&lt;/code&gt;&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;Now when you create a host, as long as you have your realm selected, it should automatically join the realm and register with the server.&lt;/p&gt;
+</description>
+      </item>
+    
+
+  </channel>
+</rss>

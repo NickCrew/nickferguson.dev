@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
+  <url>
+    <loc>http://example.org/fixed/about/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/</loc>
+    <lastmod>2021-04-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/post/2021-04-21-how-to-learn-linux/</loc>
+    <lastmod>2021-04-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/post/</loc>
+    <lastmod>2021-04-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/post/2021-04-10-foreman-freeipa/</loc>
+    <lastmod>2021-04-10T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/fixed/</loc>
+    <lastmod>2021-03-21T00:00:00+00:00</lastmod>
+  </url><url>
+    <loc>http://example.org/categories/</loc>
+  </url><url>
+    <loc>http://example.org/tags/</loc>
+  </url>
+</urlset>

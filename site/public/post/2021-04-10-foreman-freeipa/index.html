@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
+
+  <head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+
+  <title>
+    
+      Foreman and FreeIPA Realm Integration &middot; Nick&#39;s Blog
+    
+  </title>
+
+  
+  <link rel="stylesheet" href="/css/poole.css">
+  <link rel="stylesheet" href="/css/syntax.css">
+  <link rel="stylesheet" href="/css/lanyon.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=PT+Serif:400,400italic,700|PT+Sans:400">
+
+  
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/apple-touch-icon-144-precomposed.png">
+  <link rel="shortcut icon" href="/assets/favicon.ico">
+
+  
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="/atom.xml">
+</head>
+
+
+  <body class="theme-base-0e">
+
+
+    
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>
+      Get ready for&hellip; DragonOps.
+    </p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item " href="/">Home</a>
+    <a class="sidebar-nav-item " href="/post">Posts</a><a class="sidebar-nav-item" href="/categories/" title="Categories">Categories</a>
+    <a class="sidebar-nav-item " href="http://example.org/fixed/about/">About</a>
+      </nav>
+
+  <div class="sidebar-item">
+    <p>&copy; 2021. All rights reserved.</p>
+  </div>
+</div>
+
+
+    
+    <div class="wrap">
+      <div class="masthead">
+        <div class="container">
+          <h3 class="masthead-title">
+            <a href="/" title="Home">Nick&#39;s Blog</a>
+            <small>It works on my machine.</small>
+          </h3>
+        </div>
+      </div>
+
+      <div class="container content">
+
+
+<div class="post">
+  <h1 class="post-title">Foreman and FreeIPA Realm Integration</h1>
+  <span class="post-date">Apr 10 2021</span>
+  <p>A configuration by which  hosts created with Foreman auto-join your FreeIPA Realm and registered as IPA hosts</p>
+<blockquote>
+<p>Note: This guide was originally written to target Redhat 7</p>
+</blockquote>
+<hr>
+<h3 id="freeipa-host">FreeIPA Host</h3>
+<p>We need to create an IPA user for foreman. I used <em>&ldquo;foreman-user&rdquo;</em> but you can choose something different if you&rsquo;d like. This article will assume <em>&ldquo;foreman-user&rdquo;</em>. Avoid foreman-proxy or other usernames that occur as users on the Foreman host. Assign this user the <strong>role</strong> of <em>Smart Proxy Host Manager</em>.</p>
+<p>Before beginning, your Foreman host needs to be registered as an IPA host.</p>
+<pre><code>$ ipa-client-install
+</code></pre>
+<p>We need to create a <strong>service</strong> for the Foreman proxy.</p>
+<p>If you&rsquo;re using the FreeIPA webui:</p>
+<blockquote>
+<p><em>Identity</em> =&gt; <em>Services</em> =&gt; <em>&ldquo;add +&quot;</em></p>
+</blockquote>
+<h4 id="example">Example</h4>
+<blockquote>
+<p><a href="mailto:foremanproxy/foreman.example.com@EXAMPLE.COM">foremanproxy/foreman.example.com@EXAMPLE.COM</a></p>
+</blockquote>
+<hr>
+<h3 id="foreman-host">Foreman Host</h3>
+<p>You need to install the <code>ipa-admintools</code> package:</p>
+<pre><code>$ yum install ipa-admintools
+$ foreman-prepare-realm admin foreman-user
+</code></pre>
+<p>Now we need to edit some config files.</p>
+<h5 id="etcforeman-proxysettingsdfreeipa_realmyml"><em>/etc/foreman-proxy/settings.d/freeipa_realm.yml</em></h5>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># /etc/foreman-proxy/settings.d/freeipa_realm.yml</span>
+
+<span class="c1"># Authentication for Kerberos-based Realms</span>
+:keytab_path: /etc/foreman-proxy/freeipa.keytab
+:principal: foreman-user@EXAMPLE.COM
+
+:ipa_config: /etc/ipa/default.conf
+<span class="c1"># Remove from DNS when deleting the FreeIPA entry</span>
+:remove_dns: <span class="nb">true</span>
+</code></pre></div><h5 id="etcforeman-proxysettingsdrealmyml"><em>/etc/foreman-proxy/settings.d/realm.yml</em></h5>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash"><span class="c1"># /etc/foreman-proxy/settings.d/realm.yml</span>
+
+<span class="c1"># Can be true, false, or http/https to enable just one of the protocols</span>
+:enabled: <span class="nb">true</span>
+
+<span class="c1"># Available providers:</span>
+<span class="c1">#   realm_ad</span>
+<span class="c1">#   realm_freeipa</span>
+:use_provider: realm_freeipa
+</code></pre></div><hr>
+<h3 id="freeipa-host-1">FreeIPA Host</h3>
+<p>Copy the keytab from the IPA server, where <em>freeipa</em> is the hostname of your IPA server and <em>foremanproxy</em> is the name of the service:</p>
+<pre><code>$ ipa-getkeytab -s freeipa.example.com -p foremanproxy/freeipa.example.com -k /etc/krb5.keytab *
+</code></pre>
+<p>Copy the keytab to the appropriate location.</p>
+<pre><code>$ cp freeipa.keytab /etc/foreman-proxy/freeipa.keyab
+</code></pre>
+<p>Make the foreman-proxy user owner and set correct permissions.</p>
+<pre><code>$ chown foreman-proxy /etc/foreman-proxy/freeipa.leytab
+$ chmod 600 /etc/foreman-proxy/freeipa.keytab
+$ cp /etc/ipa/ca.crt /etc/pki/ca-trust/source/anchors/ipa.crt
+$ update-ca-trust enable &amp;&amp; update-ca-trust
+$ systemctl restart foreman-proxy
+</code></pre>
+<p>Test the keytab is present.</p>
+<div class="highlight"><pre class="chroma"><code class="language-bash" data-lang="bash">$ sudo -u foreman-user kinit -k -t /etc/foreman-proxy/freeipa.keytab foreman-user
+</code></pre></div><p>You should now be able to select your realm in the Foreman webui</p>
+<blockquote>
+<p><em>Infrastructure</em> =&gt; <em>Realms</em></p>
+</blockquote>
+<p>Ensure your provisioning template calls the <code>freeipa_register</code> snippet. Read over the snippet to see optional host parameters you may set.</p>
+<p><em>If you are using FreeIPA as your DNS server and you would like the records automatically updated, set the following host parameter:</em></p>
+<blockquote>
+<p><code>Name: </code>freeipa_opts Value: Î-enable-dns-updates`</p>
+</blockquote>
+<p><em>If you are using the automount feature of FreeIPA:</em></p>
+<blockquote>
+<p><code>Name: freeipa_automount Value: true</code></p>
+</blockquote>
+<p>Now when you create a host, as long as you have your realm selected, it should automatically join the realm and register with the server.</p>
+</div>
+
+      </div>
+    </div>
+
+    <label for="sidebar-checkbox" class="sidebar-toggle"></label>
+    
+  </body>
+</html>
+
