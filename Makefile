@@ -8,6 +8,8 @@ DEV_PORT=13131
 STAGING_ADDR=192.168.2.7
 STAGING_URL=http://192.168.2.7
 
+DEPLOY=$(BASEDIR)/deploy.sh
+
 help:
 	@echo 'Usage:'
 	@echo 'make serve [PORT=13131]    serve site and watch src for changes' 	
@@ -31,6 +33,9 @@ watch:
 provision:
 	apt-get update && apt-get install -y python3 python3-pip
 	pip3 install hugo
+
+deploy:
+	bash -c $(DEPLOY)
 
 
 .PHONY: help
