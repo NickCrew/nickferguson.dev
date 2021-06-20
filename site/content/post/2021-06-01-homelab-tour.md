@@ -10,13 +10,16 @@ An overview of my home network, lab and development environment.
 
 ## Gear
 
-![Network Cabinet Zoomed Out](/img/netcabinet_small.jpg)
+![Network Cabinet](/img/netcabinetfull_small.jpg)
 
 ### Network
 
-As part of an ancient quest to spend less time maintaining a more reliable home network, I went all-in on Unifi this year. I am not a total stranger to Ubiquiti; previously I was using an Edgerouter X, however I also upgraded my internet to a symmetric gigabit connection and that was more than the poor little ER-X could handle.  
+As part of an ancient quest to spend less time maintaining a more reliable home network, I went all-in on Unifi this year.  
 
-![Network Cabinet](/img/netcabinetfull_small.jpg)
+I am not a total stranger to Ubiquiti; Edgerouters have been my preferred home edge device for a long time. We haven't seen a lot of innovation in that line recently, but with the move to replace the VyOS-based OS with the new UnifiOS and the new UNMS panel, perhaps there is hope.  
+
+This time though, I was willing to give up the powerful configuration interfaces of the Edgerouter for the centrally-managed Unifi line. If you stick to Unifi switches and access points, the SDN capabilities are really a breeze.
+
 
 Despite many a tale of woe on Reddit and the Internet, I chose to start with an Unifi Dream Machine Pro (UDMP) and I'm glad I did because it has been solid for me and while the EdgeOS has more raw capabilities, I found the UDMP to do everything I needed and without extensive configuring.
 
@@ -27,19 +30,26 @@ The full Unifi setup includes:
 - __U6-Lite__ (Wifi 6 access point)
 - __UAP-AC-Lite__ (Wifi 5 access point)
 
-![Unifi Gear](/img/unifigear_small.jpg)
+![Unifi Gear Closeup](/img/unifigear2_small.jpg)
 
 ### Storage
 
-I have a __Synology DS720+__ that enjoys 'appliance' status on the network. In addition to normal storage, production services with stricter availability requirements run on this device in Dcker containers.
+I have a __Synology DS720+__ that I really see more as an appliance, rather than a lab host. As such I try not to blow it up too often and any "production" services that do not consume excessive resources will usually run on the syno in Docker containers.
 
-Despite many reports that it can handle up to 16GB of memory, I run my DS720+ with only the max recommended memory of 6GB and I still find it very capable. I try to keep the NAS fairly reliable so I will usually put normal production services here if they are not too resource intensive and can be run in docker containers. I also take advantage of several Synology packages to provide core services. I tend to view my NAS as an appliance and I treat the services it hosts similarly.
+This unit has the maximum supported memory, 6GB, and a J4125 Celeron CPU. I really like these little Celeron CPUs as they are quad-core, have quick-sync and decent compute power. There is a J5040 board from ASRock that I would still like to build a custom mini-ITX server with because I like them so much.
+
 
 ### Compute
 
-For production services with higher memory or CPU requirements, I am using a __NUC8i3BEH__ with 16GB memory and 2 256GB SSDs in RAID-1.
+The workhouse of the lab is  a __NUC8i3BEH__ with 16GB memory and 2 256GB SSDs in RAID-1. Even though the NAS has a capable quick-sync CPU, I run the Plex server on this unit. The NUC8 has great 8th quick-sync.  
 
 ![Syno720 and NUC8i3BEH](/img/syno_nuc_small.jpg)
+
+This host is equipped with KVM, Qemu and Libvirt and can quickly spawn VMs using cloud-init, though I usually always prefer an LXD container to a virtual machine. I also use regular Docker containers for some of the media library containers and production databases.  
+
+I like to use Btrfs because it makes snapshotting so easy, which is really helpful in a lab environment.  
+
+Most of the mad science happening is happening on single-node kubernetes like microk8s or clusters of VMs. 
 
 ---
 
@@ -62,8 +72,6 @@ another NUC or similar mini/micro/tiny machine.
 
 
 ### UDM Pro Containers
-
-![Unifi Gear Closeup](/img/unifigear2_small.jpg)
 
 The UDMP can run containers via `podman` (see: [udm-utilities](https://github.com/boostchicken/udm-utilities)).
 I have containers for the following:
@@ -121,6 +129,8 @@ discovery and links. This app is dead simple to configure using YAML and has a n
 I have a single grafana instance here, though it pulls data from various places on the network.   Some  of the information it displays:
 - Network stats from [Unifi Poller](https://github.com/unifi-poller/unifi-poller)
 - SNMP data from the DS720+
+
+![Syno720 Dashboard](/img/synodash_medium.png)
 
 #### Unifi-Poller, Telegraf
 
