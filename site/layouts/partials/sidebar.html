@@ -1,0 +1,53 @@
+<!-- Target for toggling the sidebar `.sidebar-checkbox` is for regular
+     styles, `#sidebar-checkbox` for behavior. -->
+<input type="checkbox" class="sidebar-checkbox" id="sidebar-checkbox">
+
+<!-- Toggleable sidebar -->
+<div class="sidebar" id="sidebar">
+  <div class="sidebar-item">
+    <p>
+      {{- with .Site.Params.description }}
+      {{ . | markdownify }}
+      {{- end }}
+    </p>
+  </div>
+
+  <nav class="sidebar-nav">
+    <a class="sidebar-nav-item {{ if .IsHome }} active {{ end }}" href="/">Home</a>
+    <a class="sidebar-nav-item {{ if eq .RelPermalink "/post/" }} active {{ end }}" href="/post">Posts</a>
+    {{- $currentPage := . }}
+    {{- range .Site.Menus.main -}}
+    <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
+    {{- end -}}
+
+    {{- $thisperma := .Permalink }}
+    {{ range .Site.Pages.ByWeight -}}
+      {{ if isset .Params "sidebar" -}}
+        <a class="sidebar-nav-item {{ if eq .Permalink $thisperma }} active {{ end }}" href="{{ .Permalink }}">{{ .Title }}</a>
+      {{ end -}}
+    {{ end -}}
+
+    {{- with .Site.Params.Github }}
+    <a class="sidebar-nav-item" href="{{ .url }}/archive/{{ .head }}.zip">Download</a>
+    <a class="sidebar-nav-item" href="{{ .url }}">GitHub project</a>
+    <span class="sidebar-nav-item">Currently on {{ .head }}</span>
+    {{ end -}}
+
+  </nav>
+
+  <div class="sidebar-item">
+	  <p>
+		  Nick Ferguson is a software engineer that specializes in platform development and release engineering. He
+		  is particularly interested in distributed systems, Kubernetes and Linux systems.
+	  </p>
+	  <p>
+		  <a href="/files/Resume_Nick_Ferguson_Build_Engineer.pdf">Hire Me</a>
+	  </p>
+	  <p>
+		   <a href="https://github.com/NickCrew">Find me on Github</a>
+	  </p>
+  </div>
+  <div class="sidebar-item">
+    <p>&copy; {{ .Site.LastChange.Year }}. All rights reserved.</p>
+  </div>
+</div>

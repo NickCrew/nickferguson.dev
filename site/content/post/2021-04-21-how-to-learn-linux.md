@@ -1,7 +1,15 @@
-{
-    "title": "How To Learn Linux",
-    "date": "2021-04-21"
-}
++++
+author = "Nick Ferguson"
+title = "How To Learn Linux"
+date = "2021-04-21"
+description = "Describes one path to getting started on your linux learning path"
+tags = [
+	"linux"
+]
+categories = [
+	"Articles"
+]
++++
 
 I often see the question 'How do I learn Linux?'. It is usually from those who do not have access to professional work involving Linux. This is how I got start with Linux as a kid and how I usually respond to this question.
 

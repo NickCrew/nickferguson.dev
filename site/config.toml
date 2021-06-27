@@ -1,4 +1,4 @@
-baseURL = "http://example.org/"
+baseURL = "https://nickferguon.dev/"
 languageCode = "en-us"
 theme = "lanyon-hugo"
 pygmentsuseclasses = "true"
@@ -19,5 +19,6 @@ pygmentsuseclasses = "true"
 	title = "Categories"
 	url = "/categories/"
 	weight = -110
+
 
 	

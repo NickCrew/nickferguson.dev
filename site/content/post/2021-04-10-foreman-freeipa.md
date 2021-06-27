@@ -1,7 +1,20 @@
-{
-    "title": "Foreman and FreeIPA Realm Integration",
-    "date": "2021-04-10"
-}
++++
+author = "Nick Ferguson"
+title = "Foreman and FreeIPA Realm Integration"
+date = "2021-04-10"
+description = "Use Foreman+Katello with FreeIPA for DNS Integration"
+tags = [
+    "foreman",
+	"linux",
+	"katello",
+	"freeipa",
+	"satellite",
+	"dns"
+]
+categories = [
+	"Tutorials"
+]
++++
 
 
 A configuration by which  hosts created with Foreman auto-join your FreeIPA Realm and registered as IPA hosts

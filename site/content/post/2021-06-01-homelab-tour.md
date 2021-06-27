@@ -1,7 +1,19 @@
-{
-    "title": "Home Network Tour",
-    "date": "2021-06-01"
-}
++++
+author = "Nick Ferguson"
+title = "Home Lab Tour"
+date = "2021-06-01"
+description = "A quick tour of my home network and its services"
+tags = [
+    "lab",
+	"networks",
+	"unifi",
+	"synology"
+]
+categories = [
+	"Articles"
+]
+series = ["Home Lab"]
++++
 
 
 An overview of my home network, lab and development environment.
