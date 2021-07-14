@@ -1,0 +1,20 @@
+#!/usr/bin/env bash
+
+set -e
+
+release_tarball="https://github.com/gohugoio/hugo/releases/download/v0.84.1/hugo_0.84.1_Linux-64bit.tar.gz"
+
+curl -fsSL $release_tarball > /tmp/hugo.tar.gz
+mkdir -p /tmp/hugo
+tar -xvf /tmp/hugo.tar.gz -C /tmp/hugo
+
+cp -f /tmp/hugo/hugo /usr/local/bin/hugo
+cp -f $PWD/nicksblog.service /etc/systemd/system/nicksblog.service
+cp -f $PWD/start-hugo-server /usr/local/bin/start-hugo-server
+chmod +x /usr/local/bin/start-hugo-server
+
+systemctl enable nicksblog.service
+systemctl start nicksblog.service
+
+
+

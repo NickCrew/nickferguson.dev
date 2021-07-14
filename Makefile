@@ -22,29 +22,21 @@ help:
 	@echo 'Usage:'
 	@echo 'make serve serve site and watch src for changes' 	
 
-provision-prod:
-	curl -fsSL $(RELEASE_TARBALL_URL) > /tmp/hugo.tar.gz
-	mkdir -p /tmp/hugo
-	tar -xvf /tmp/hugo.tar.gz -C /tmp/hugo
-	cp -f /tmp/hugo/hugo /usr/local/bin/hugo
-	cp -f resources/nicksblog.service /etc/systemd/system/nicksblog.service
-	cp -f server/start-hugo-server /usr/local/bin/start-hugo-server
-	chmod +x /usr/local/bin/start-hugo-server
-	systemctl enable nicksblog.service
-	systemctl start nicksblog.service
-
-provision-dev:
+dev-setup:
 	curl -fsSL $(RELEASE_TARBALL_URL) > /tmp/hugo.tar.gz
 	mkdir -p ./bin
 	tar -xvf /tmp/hugo.tar.gz -C ./bin
 
+build:
+	$(HUGO_BIN) --source $(SRC_DIR) 
+
 serve:
-	$(HUGO_BIN) server --source $(SRC_DIR) --port $(PORT) --bind=$(BIND_ADDR) --baseURL=$(BASE_URL) 
+	$(HUGO_BIN) server --source $(SRC_DIR) --port $(PORT) --bind=$(BIND_ADDR) --baseURL=$(BASE_URL) --cleanDestinationDirectories
 
 watch:
 	hugo watch --source "$(SRC_DIR)"
 
 deploy:
-	rsync -avv --log-file=$(RSYNC_LOG) "$(SRC_DIR)/" $(SSH_HOST):$(SSH_DIR)/
+	rsync -avh "$(SRC_DIR)/" $(SSH_HOST):$(SSH_DIR)/ --delete --log-file=$(RSYNC_LOG) 
 
 .PHONY: help
