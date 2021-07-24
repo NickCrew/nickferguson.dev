@@ -28,10 +28,10 @@ dev-setup:
 	tar -xvf /tmp/hugo.tar.gz -C ./bin
 
 build:
-	$(HUGO_BIN) --source $(SRC_DIR) 
+	$(HUGO_BIN) --source $(SRC_DIR)
 
 serve:
-	$(HUGO_BIN) server --source $(SRC_DIR) --port $(PORT) --bind=$(BIND_ADDR) --baseURL=$(BASE_URL) --cleanDestinationDirectories
+	$(HUGO_BIN) server --source $(SRC_DIR) --port $(PORT) --bind=$(BIND_ADDR) --baseURL=$(BASE_URL) --disableFastRender
 
 watch:
 	hugo watch --source "$(SRC_DIR)"

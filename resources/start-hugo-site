@@ -1,8 +1,0 @@
-#!/usr/bin/env bash
-
-/usr/local/bin/hugo server \
-	--source $HUGO_SITE_DIR \
-	--port $HUGO_PORT \
-	--bind $HUGO_BIND_ADDR \ 
-	--baseUrl $HUGO_BASE_URL
-
