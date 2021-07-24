@@ -11,7 +11,7 @@ Description=Hugo server for Nick's blog
 [Service]
 User=root
 WorkingDirectory=/var/local/nicksblog/site
-ExecStart=hugo server
+ExecStart=/usr/local/bin/hugo server --baseUrl=https://nickferguson.dev --port 1313 --appendPort=false
 Restart=always
 
 [Install]
