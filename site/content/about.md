@@ -1,7 +1,7 @@
 +++
 author = "Nick Ferguson"
 title = "About"
-date = "2021-07-29T23:42:00-04:00"
+date = "2021-07-04T23:42:00-04:00"
 description = "The illustrious and mysterious life of Nick Ferguson"
 tags = ["about","bio"]
 categories = ["Articles"]
@@ -52,6 +52,7 @@ I spent the next few years obsessed with learning Linux for the sake of learning
 We were entering the Compiz Age - a period of breathtaking true transparency, rotating desktop cubes and wobbly windows. I started looking for
 "harder" distributions to use like Gentoo and Arch (my favorite desktop Linux to this day).  
 
+![Compiz](/img/compiz_small.png)
 
 ### But Can My Grandma Use it?
 
@@ -77,7 +78,6 @@ people I helped were out of obligation because my dad probably owed them rent or
 them. Desktop computers have sort of gone the way of the do-do lately but I still massacre a Windows install
 occasionally.  
 
-![Compiz](/img/compiz_small.png)
 
 ### The Fall
 
