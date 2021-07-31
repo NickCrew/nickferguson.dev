@@ -14,7 +14,7 @@
 
   <nav class="sidebar-nav">
     <a class="sidebar-nav-item {{ if .IsHome }} active {{ end }}" href="/">Home</a>
-    <a class="sidebar-nav-item {{ if eq .RelPermalink "/post/" }} active {{ end }}" href="/post">Posts</a>
+    <a class="sidebar-nav-item {{ if eq .RelPermalink "/post/" }} active {{ end }}" href="/post">Archive</a>
     {{- $currentPage := . }}
     {{- range .Site.Menus.main -}}
     <a class="sidebar-nav-item{{if or ($currentPage.IsMenuCurrent "main" .) ($currentPage.HasMenuCurrent "main" .) }} active{{end}}" href="{{ .URL }}" title="{{ .Title }}">{{ .Name }}</a>
@@ -36,7 +36,8 @@
   </nav>
 
   <div class="sidebar-item">
-		  <a href="/about">About Me</a>
+	  <p><a href="https://github.com/NickCrew">Github</a></p>
+	  <p><a href="mailto:blog@nickferguson.dev">Spam Me</a></p>
   </div>
   <div class="sidebar-item">
     &copy; {{ .Site.LastChange.Year }}. All rights reserved.

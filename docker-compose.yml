@@ -1,0 +1,11 @@
+version: '3.8'
+services:
+  blog:
+    image: nginx
+    container_name: blog
+    volumes:
+      - $PWD/site/public:/usr/share/nginx/html
+    ports:
+      - '13131:80'
+    restart: unless-stopped
+      

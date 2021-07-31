@@ -1,2 +1,3 @@
 *.log
-site/public/
+hugo
+**/public/

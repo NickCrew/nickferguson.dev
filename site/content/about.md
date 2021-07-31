@@ -120,3 +120,7 @@ Linux boy was I in for a treat!
 
 Coming from the Linux systems I pretty naturally fell into what you might call Site Reliability Engineering or Platform
 Development which basically boils down to me developing software no one's ever heard of thats used to make and ship software you've actually heard of.
+
+---
+
+[Request My Resume](mailto:jobs@nickferguson.dev)
