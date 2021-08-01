@@ -5,16 +5,16 @@
 @import "partials/_fonts.scss";
 @import "partials/_syntax.scss";
 
-$blue: #4ab0c6;
-$blue-darker: #3b5076;
-$coral: #c6554e;
-$orange: #c04a47;
+/* Custom Colors */
+$blue: #61b0ae;
+$blue-darker: #6b7978;
+$coral: #de5e5c;
+$orange: #d4574e;
 $accent-dark: #3b5076;
-$accent-light: #ad9370;
-$accent-medium: #b06e61;
+$accent-medium: #daa684;
+$accent-light: #a69c8b;
 
-$accent-dark: #3b5076;
-
+/* Custom Fonts */
 $code: "PT Mono",Monaco,"Courier New",monospace;
 $fancy-headings: "KoHo";
 
@@ -41,6 +41,7 @@ h6 {
 h1 { 
 	color: $accent-dark; 
 }
+
 h2 {
 	a {
 		color: $accent-dark;
@@ -63,7 +64,7 @@ h2 {
 }
 
 .color-link:hover {
-    color: $blue-darker;
+    color: $accent-medium;
 }
 
 .paginator {
@@ -73,9 +74,6 @@ h2 {
 }
 
 .tag {
-    margin-right: 0.75em;
-    margin-bottom: 1em;
-    line-height: 1.75em;
     color: $accent-light;
 }
 
