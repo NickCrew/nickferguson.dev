@@ -7,7 +7,11 @@ HUGO_THEMES_DIR ?= $(HUGO_SRC_DIR)/themes
 HUGO_CONTENT_DIR ?= $(HUGO_SRC)/content
 HUGO_LAYOUT_DIR ?= $(HUGO_SRC)/layouts
 HUGO_HTML_DIR ?= $(HUGO_SRC_DIR)/public
-HUGO_DEPLOY_DIR ?= $(HUGO_HTML_DIR)
+
+
+HUGO_ENVIRONMENT ?= development
+HUGO_STAGING_PATH ?= /var/www/html
+HUGO_BUILD_OUTPUT ?= $(HUGO_HTML_DIR)
 
 HUGO_THEME ?= noteworthy
 HUGO_VERSION ?= "0.84.1"
@@ -39,6 +43,7 @@ clean:
 
 build:
 	hugo --source $(HUGO_SRC_DIR) \
+		--environment $(HUGO_ENVIRONMENT) \
 		--cleanDestinationDir
 
 archive-html:
@@ -46,16 +51,15 @@ archive-html:
 
 deploy:
 	rsync -avh \
-		"$(HUGO_DEPLOY_DIR)/" $(HUGO_SSH_USER)@$(HUGO_SSH_HOST):$(HUGO_SSH_DIR)/ \
+		"$(HUGO_BUILD_OUTPUT)/" $(HUGO_SSH_USER)@$(HUGO_SSH_HOST):$(HUGO_SSH_DIR)/ \
 		--delete \
-		--log-file=$(TMPDIR)/rsync.log
+		--log-file=rsync.log
 
-dev-server:
-	hugo server \
-		--bind=$(HUGO_BIND_ADDR) \
-		--baseURL=$(HUGO_BASE_URL) \
-		--port=$(HUGO_PORT) \
-		--source $(HUGO_SRC_DIR)
+stage:
+	sudo rsync -avh site/public/ /var/www/html/
+
+serve:
+	hugo server --bind=0.0.0.0 --source site --baseURL=http://192.168.2.7:1313 --appendPort=false --port=1313 --disableFastRender
 
 get-hugo:
 	curl -fsSL $(RELEASE_TARBALL_URL) > hugo.tar.gz

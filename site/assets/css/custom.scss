@@ -2,18 +2,31 @@
 	CSS CUSTOMIZATIONS
 */
 
-@import "partials/customfont";
+@import "partials/_fonts.scss";
+@import "partials/_syntax.scss";
 
-$custom-titles: "Encode Sans Semi Expanded";
+$blue: #4ab0c6;
+$blue-darker: #3b5076;
+$coral: #c6554e;
+$orange: #c04a47;
+$accent-dark: #3b5076;
+$accent-light: #ad9370;
+$accent-medium: #b06e61;
+
+$accent-dark: #3b5076;
+
+$code: "PT Mono",Monaco,"Courier New",monospace;
+$fancy-headings: "KoHo";
 
 .site-title {
 	a {
-		font-family: $custom-titles;
+		font-family: $fancy-headings;
+		color: $coral;
 	}
 }
 
-.color-link {
-	font-family: $custom-titles;
+.description {
+	color: $accent-light;
 }
 
 h1,
@@ -22,5 +35,75 @@ h3,
 h4,
 h5,
 h6 {
-    font-family: $custom-titles;
+    font-family: $fancy-headings;
 }
+
+h1 { 
+	color: $accent-dark; 
+}
+h2 {
+	a {
+		color: $accent-dark;
+	}
+	a:visited {
+		color: $accent-dark;
+	}
+	a:hover {
+		color: $accent-medium;
+	}
+	
+}
+
+.color-link {
+    color: $blue;
+}
+
+.color-link:visited {
+    color: $blue;
+}
+
+.color-link:hover {
+    color: $blue-darker;
+}
+
+.paginator {
+    a {
+        color: $blue;
+    }
+}
+
+.tag {
+    margin-right: 0.75em;
+    margin-bottom: 1em;
+    line-height: 1.75em;
+    color: $accent-light;
+}
+
+.tag:visited {
+    color: $accent-light;
+}
+
+.tag:hover {
+    color: $accent-medium;
+}
+
+
+footer {
+    .social-icon>svg:hover {
+        fill: $accent-medium;
+    }
+
+    a {
+        color: $accent-light;
+    }
+
+    a:visited {
+        color: $accent-light;
+    }
+
+    a:hover {
+        color: $accent-medium;
+    }
+}
+
+

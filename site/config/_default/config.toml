@@ -1,6 +1,6 @@
 # config/_default/config.toml
 
-title	= "nf.dev"
+title	= "nickferguson.dev"
 baseURL = "//nickferguson.dev"
 theme	= "noteworthy"
 
