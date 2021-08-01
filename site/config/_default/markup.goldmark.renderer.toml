@@ -1,0 +1,4 @@
+# config/_default/markup.goldmark.renderer.toml
+
+# Set to false to disallow raw HTML in markdown files
+unsafe = true  

@@ -1,0 +1,7 @@
+# config/_default/taxonomies.toml
+
+tag = "tags"
+series = "series"
+category = "categories"
+
+

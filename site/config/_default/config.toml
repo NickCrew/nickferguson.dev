@@ -1,0 +1,16 @@
+# config/_default/config.toml
+
+title	= "nf.dev"
+baseURL = "//nickferguson.dev"
+theme	= "noteworthy"
+
+LanguageCode	= "en"
+enableRobotsTXT = true
+
+paginate		= 4
+summaryLength	= 50 
+
+pygmentsuseclasses = true  # requires style sheet
+
+
+

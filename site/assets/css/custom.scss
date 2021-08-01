@@ -1,0 +1,26 @@
+/* 
+	CSS CUSTOMIZATIONS
+*/
+
+@import "partials/customfont";
+
+$custom-titles: "Encode Sans Semi Expanded";
+
+.site-title {
+	a {
+		font-family: $custom-titles;
+	}
+}
+
+.color-link {
+	font-family: $custom-titles;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: $custom-titles;
+}

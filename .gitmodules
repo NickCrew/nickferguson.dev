@@ -1,3 +1,3 @@
-[submodule ".\\themes\\lanyon-hugo"]
-	path = .\\site\\themes\\lanyon-hugo
-	url = https://github.com/tummychow/lanyon-hugo.git
+[submodule "site/themes/noteworthy"]
+	path = site/themes/noteworthy
+	url = git@github.com:NickCrew/hugo-theme-noteworthy.git
