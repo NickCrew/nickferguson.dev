@@ -4,7 +4,7 @@ title = "Home Lab Tour"
 date = "2021-06-01"
 summary = "A high-level tour of the domestic platform that supports my over-engineered home automation and development labs."
 tags = [
-    "home",
+    "home lab",
 	"networking",
 	"unifi",
 	"synology"

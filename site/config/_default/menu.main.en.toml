@@ -13,11 +13,11 @@
     url = "/about/"
     weight = 5 # Weight is an integer used to sort the menu items. The sorting goes from smallest to largest numbers. If weight is not defined for each menu entry, Hugo will sort the entries alphabetically.
 
-[[menu.main]]
-    identifier = "tags"
-    name = "Tags"
-    url = "/tags/"
-    weight = 10
+#[[menu.main]]
+#    identifier = "tags"
+#    name = "Tags"
+#   url = "/tags/"
+#    weight = 10
 
 [[menu.main]]
     name = "Archives"
@@ -29,13 +29,13 @@
 	name = "Series"
 	identifier = "series"
 	url = "/series/"
-	weight = 30
+	weight = 7
 
-[[menu.main]]
-    name = "Categories"
-	identifier = "categories"
-	url = "/categories/"
-	weight = 40
+#[[menu.main]]
+#    name = "Categories"
+#	identifier = "categories"
+#	url = "/categories/"
+#	weight = 40
 
 
 		

@@ -1,5 +1,13 @@
 # Nick's Blog
 
+Project files for [nickferguson.dev](https://nickferguson.dev).  
+
+Uses Hugo to publish the site as static content.
+
+## Requirements
+
+- Hugo (extended)
+
 ## Install Hugo
 
 Install Hugo (extended) from tarball release.

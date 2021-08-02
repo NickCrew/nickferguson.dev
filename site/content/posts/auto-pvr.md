@@ -3,7 +3,7 @@ author = "Nick Ferguson"
 title = "Auto PVR"
 date = "2021-07-23"
 summary = "A repo with instructions for automating tracking and downloading of movies, TV, music and eBooks along with friendly frontends for browsing and requesting new content. Based on the *arr apps and Calibre eBook manager."
-tags = ["docker","sonarr","radarr","pvr","media","bittorrent"]
+tags = ["docker","sonarr","radarr","media"]
 series = ["Home Automation"]
 +++
 

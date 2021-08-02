@@ -8,7 +8,6 @@ tags = [
 	"linux",
 	"katello",
 	"freeipa",
-	"satellite",
 	"red hat",
 	"dns"
 ]

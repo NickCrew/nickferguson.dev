@@ -15,9 +15,11 @@ HUGO_BUILD_OUTPUT ?= $(HUGO_HTML_DIR)
 
 HUGO_THEME ?= noteworthy
 HUGO_VERSION ?= "0.86.1"
-HUGO_PORT ?= 1313
-HUGO_BIND_ADDR ?= 0.0.0.0
-HUGO_BASE_URL ?= 192.168.2.7
+
+HUGO_PORT ?= 13131
+HUGO_BIND_ADDR ?= 127.0.0.1
+HUGO_BASE_URL ?= //localhost:$(HUGO_PORT)
+HUGO_APPEND_PORT ?= true
 
 HUGO_SITE_NAME ?= nickferguson.dev
 HUGO_DEPLOY_TARGET_DIR ?= /var/www/$(HUGO_SITE_NAME)
@@ -45,7 +47,12 @@ stage:
 	sudo rsync -avh site/public/ /var/www/html/
 
 serve:
-	$(HUGO_BIN) server --bind=$(HUGO_BIND_ADDR) --source site --baseURL=$(HUGO_BASE_URL) --appendPort=false --port=$(HUGO_PORT) --disableFastRender
+	$(HUGO_BIN) server --source site \
+		--port=$(HUGO_PORT) \
+		--baseURL=$(HUGO_BASE_URL) \
+		--bind=$(HUGO_BIND_ADDR) \
+		--appendPort=$(HUGO_APPEND_PORT) \
+		--disableFastRender
 
 build:
 	$(HUGO_BIN) --source $(HUGO_SRC_DIR) \
