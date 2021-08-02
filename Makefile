@@ -14,13 +14,13 @@ HUGO_STAGING_PATH ?= /var/www/html
 HUGO_BUILD_OUTPUT ?= $(HUGO_HTML_DIR)
 
 HUGO_THEME ?= noteworthy
-HUGO_VERSION ?= "0.84.1"
+HUGO_VERSION ?= "0.86.1"
 HUGO_PORT ?= 1313
 HUGO_BIND_ADDR ?= 0.0.0.0
 HUGO_BASE_URL ?= 192.168.2.7
 
 HUGO_SITE_NAME ?= nickferguson.dev
-HUGO_SSH_DIR ?= /var/www/$(HUGO_SITE_NAME)
+HUGO_DEPLOY_TARGET_DIR ?= /var/www/$(HUGO_SITE_NAME)
 HUGO_SSH_USER ?= root
 HUGO_SSH_HOST ?= dev1
 
@@ -41,46 +41,40 @@ help:
 clean:
 	rm -rf $(HUGO_HTML_DIR)/* 2>/dev/null
 
-build:
-	hugo --source $(HUGO_SRC_DIR) \
-		--environment $(HUGO_ENVIRONMENT) \
-		--cleanDestinationDir
-
-archive-html:
-	zip public.html $(HUGO_HTML_DIR)
-
-deploy:
-	rsync -avh \
-		"$(HUGO_BUILD_OUTPUT)/" $(HUGO_SSH_USER)@$(HUGO_SSH_HOST):$(HUGO_SSH_DIR)/ \
-		--delete \
-		--log-file=rsync.log
-
 stage:
 	sudo rsync -avh site/public/ /var/www/html/
 
 serve:
-	hugo server --bind=0.0.0.0 --source site --baseURL=http://192.168.2.7:1313 --appendPort=false --port=1313 --disableFastRender
+	$(HUGO_BIN) server --bind=$(HUGO_BIND_ADDR) --source site --baseURL=$(HUGO_BASE_URL) --appendPort=false --port=$(HUGO_PORT) --disableFastRender
 
-get-hugo:
+build:
+	$(HUGO_BIN) --source $(HUGO_SRC_DIR) \
+		--environment $(HUGO_ENVIRONMENT) \
+		--cleanDestinationDir
+archive:
+	zip public.html $(HUGO_HTML_DIR)
+
+deploy:
+	rsync -avh \
+		"$(HUGO_BUILD_OUTPUT)/" \
+		$(HUGO_SSH_USER)@$(HUGO_SSH_HOST):$(HUGO_DEPLOY_TARGET_DIR)/ \
+		--delete \
+		--log-file=rsync.log
+
+install-hugo:
 	curl -fsSL $(RELEASE_TARBALL_URL) > hugo.tar.gz
-	tar --extract --file=hugo.tar.gz hugo
+	tar --extract --file=hugo.tar.gz $(HUGO_BIN)
 	rm hugo.tar.gz
 
 watch:
-	hugo watch --source "$(HUGO_SRC_DIR)"
+	$(HUGO_BIN) watch --source "$(HUGO_SRC_DIR)"
 
 new-single-post:
-	hugo --source "$(HUGO_SRC_DIR)" \
+	$(HUGO_BIN) --source "$(HUGO_SRC_DIR)" \
 		new $(POST_TYPE)/$(POST_NAME).$(POST_EXTEN)
 
 new-page-bundle:
 	mkdir -p $(HUGO_CONTENT_DIR)/post/$(POST_NAME)
-	hugo --source "$(HUGO_SRC_DIR)" \
+	$(HUGO_BIN) --source "$(HUGO_SRC_DIR)" \
 		new post/$(POST_NAME)/index.md \
 		--editor vim
-
-save : clean build archive-html
-
-publish : clean build deploy
-
-dev : clean dev-server
