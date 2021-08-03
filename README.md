@@ -1,24 +1,25 @@
 # Nick's Blog
 
+[![CI](https://github.com/NickCrew/nickferguson.dev/actions/workflows/build.yml/badge.svg)](https://github.com/NickCrew/nickferguson.dev/actions/workflows/build.yml)
+
 Project files for [nickferguson.dev](https://nickferguson.dev).  
 
-Uses Hugo to publish the site as static content.
+Hugo (extended) is required to development and build the site.
 
-## Requirements
+## Development
 
-- Hugo (extended)
-
-## Install Hugo
+### Install Hugo
 
 Install Hugo (extended) from tarball release.
 
-You can modify the version by setting `HUGO_VERSION` and you can modify the install path/binary path with `HUGO_BIN` (default is simply `hugo` of the project root. The directory must exist.).
+You can modify the version by setting `HUGO_VERSION`.  
+The default `HUGO_INSTALL_DIR` is `/usr/local/bin`. 
 
 ````bash
-HUGO_BIN=~/bin/hugo make install-hugo
+make install-hugo
 ````
 
-## Development Server
+### Local Dev Server
 
 This mode will watch for changes under `site/` and continually re-build.
 
@@ -28,7 +29,11 @@ You can modify `HUGO_BASE_URL`, `HUGO_BIND_ADDR` and `HUGO_PORT` as needed.
 make serve
 ````
 
-## Clean
+## Building and Packaging
+
+Generate the static files to be served.
+
+### Clean (optiona)
 
 Remove the contents of `HUGO_BUILD_OUTPUT`
 
@@ -36,31 +41,37 @@ Remove the contents of `HUGO_BUILD_OUTPUT`
 make clean
 ````
 
-## Build
+### Build
 
-This will produce the `public/` directory with HTML+CSS ready for static deployment. You can build for three environments by setting `HUGO_ENVIRONMENT`: `development`, `staging`, and `production`.  
+Generates `HUGO_BUILD_OUTPUT` (default: `site/public/`).  
 
-The default `HUGO_BUILD_OUTPUT` path is `site/public/`.
+You can build for three environments by setting `HUGO_BUILD_ENV` (default: `production`):  
+- `development` 
+- `staging`
+- `production`  
 
 ````bash
-HUGO_ENVIRONMENT=production make build
+make build
 ````
 
-## Deploy
+### Manual Deploy
 
-Deploy the `HUGO_BUILD_OUTPUT` to the remote host `HUGO_SSH_HOST` at the path `HUGO_DEPLOY_TARGET_DIR` (default: `/var/www/$(HUGO_SITE_NAME)`)
+Deploy the `HUGO_BUILD_OUTPUT` to the remote host `HUGO_SSH_HOST` at the path `HUGO_DEPLOY_TARGET_DIR` (default: `/var/www/$(HUGO_SITE_NAME)`)  
+
+Performed via rsync over SSH.  The `HUGO_SSH_CONN` defines the remote connection in the format `user(optional)@host`.  
 
 ````bash
 make deploy
 ````
 
-## Create Zip Archive of Build Output
+### Package Public Html
 
-If you wish to create a zip archive of `HUGO_BUILD_OUTPUT`
+Create a zip archive of `HUGO_BUILD_OUTPUT`.
 
 ````bash
-make archive
+make package
 ````
+which will produce `nickferguson.dev-public.zip`
 
 
 
