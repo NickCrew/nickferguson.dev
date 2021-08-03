@@ -36,6 +36,15 @@ jobs:
         
       - name: Build site
         run: make build
+
+      - name: Install SSH Key
+        uses: shimataro/ssh-key-action@v2
+        with:
+          key: ${{ secrets.SSH_KEY }}
+          name: id_rsa
+          known_hosts: ${{ secrets.KNOWN_HOSTS }}
+          config: ${{ secrets.SSH_CONFIG }}
+
+      - name: rsync over ssh
+        run: make deploy
         
-      - name: Package public html
-        run: make package
