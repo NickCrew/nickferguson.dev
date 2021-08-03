@@ -17,14 +17,14 @@ kofi = ""
 # Add links to your accounts. Remove the ones you don't want to include.
 # Main
 email = "blog@nickferguson.dev"
-linkedin = "https://linked.com/in/ncferguson"
-#twitter = "#"
-#youtube = "#"
+linkedin = "https://linkedin.com/in/ncferguson"
+twitter = "https://twitter.com/piggahmonster"
+youtube = "https://www.youtube.com/channel/UC972wwbPrKXW-YlXCPGPbQw"
 
 # Programming
 github = "https://github.com/NickCrew"
-#stackoverflow = "#"
-#gitlab = "#"
-#codepen = "#"
+stackoverflow = "https://stackoverflow.com/users/6569965/nicholas-ferguson"
+gitlab = "https://gitlab.com/Nickopotamus"
+codepen = "https://codepen.io/nickcrew"
 
 

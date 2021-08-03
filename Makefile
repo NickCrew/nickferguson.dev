@@ -9,9 +9,10 @@ HUGO_LAYOUT_DIR ?= $(HUGO_SRC)/layouts
 HUGO_HTML_DIR ?= $(HUGO_SRC_DIR)/public
 
 
-HUGO_ENVIRONMENT ?= development
-HUGO_STAGING_PATH ?= /var/www/html
+HUGO_BUILD_ENV ?= production
 HUGO_BUILD_OUTPUT ?= $(HUGO_HTML_DIR)
+HUGO_PACKAGE_OUTPUT ?= nickferguson.dev-public.zip
+HUGO_STAGING_PATH ?= /var/www/html
 
 HUGO_THEME ?= noteworthy
 HUGO_VERSION ?= "0.86.1"
@@ -43,8 +44,9 @@ help:
 clean:
 	rm -rf $(HUGO_HTML_DIR)/* 2>/dev/null
 
-stage:
-	sudo rsync -avh site/public/ /var/www/html/
+watch:
+	$(HUGO_BIN) watch --source "$(HUGO_SRC_DIR)"
+
 
 serve:
 	$(HUGO_BIN) server --source site \
@@ -56,10 +58,10 @@ serve:
 
 build:
 	$(HUGO_BIN) --source $(HUGO_SRC_DIR) \
-		--environment $(HUGO_ENVIRONMENT) \
+		--environment $(HUGO_BUILD_ENV) \
 		--cleanDestinationDir
-archive:
-	zip public.html $(HUGO_HTML_DIR)
+package:
+	zip $(HUGO_PACKAGE_OUTPUT) $(HUGO_BUILD_OUTPUT)
 
 deploy:
 	rsync -avh \
@@ -68,13 +70,14 @@ deploy:
 		--delete \
 		--log-file=rsync.log
 
+local-deploy:
+	sudo rsync -avh site/public/ /var/www/html/
+
 install-hugo:
 	curl -fsSL $(RELEASE_TARBALL_URL) > hugo.tar.gz
 	tar --extract --file=hugo.tar.gz $(HUGO_BIN)
 	rm hugo.tar.gz
 
-watch:
-	$(HUGO_BIN) watch --source "$(HUGO_SRC_DIR)"
 
 new-single-post:
 	$(HUGO_BIN) --source "$(HUGO_SRC_DIR)" \
