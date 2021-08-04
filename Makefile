@@ -12,8 +12,8 @@ BASE_DIR=$(shell pwd)
 HUGO_SRC_DIR ?= $(BASE_DIR)/site
 HUGO_CONFIG_DIR ?= $(HUGO_SRC_DIR)/config
 HUGO_THEMES_DIR ?= $(HUGO_SRC_DIR)/themes
-HUGO_CONTENT_DIR ?= $(HUGO_SRC)/content
-HUGO_LAYOUT_DIR ?= $(HUGO_SRC)/layouts
+HUGO_CONTENT_DIR ?= $(HUGO_SRC_DIR)/content
+HUGO_LAYOUT_DIR ?= $(HUGO_SRC_DIR)/layouts
 HUGO_HTML_DIR ?= $(HUGO_SRC_DIR)/public
 
 HUGO_BUILD_ENV ?= production
