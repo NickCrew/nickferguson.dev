@@ -169,9 +169,19 @@ footer {
 	font-style: italic;
 	font-family: "Segoe UI";
 	color: $sidecolor;
-	margin-top: 3em;
+	margin-top: 5em;
 	text-align: center;
 	vertical-align: text-bottom;
+}
+
+.sidebar-copy {
+	font-size: 14px;
+	font-style: italic;
+	font-family: "Segoe UI";
+	color: $sidecolor;
+	margin-top: 5em;
+	text-align: center;
+	align-items: bottom;
 }
 
 .resume {
@@ -209,3 +219,4 @@ figcaption {
 .resume p {
 	margin-bottom: 1px;
 }
+

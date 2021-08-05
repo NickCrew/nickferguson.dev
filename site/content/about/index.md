@@ -121,4 +121,5 @@ Development which basically boils down to me developing software no one's ever h
 
 ---
 
-[Request My Resume](mailto:jobs@nickferguson.dev)
+###
+{{< resize-image src="nick_ferguson_resume_qr_code.png" alt="Download my resume" caption="Download My Resume" >}}
