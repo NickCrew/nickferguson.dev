@@ -1,12 +1,10 @@
 <footer class="footer-mobile">
-	{{ partial "social.html" . }}
-	<hr/>
 	{{ partial "tag-cloud.html" . }}
-	<hr/>
 	<div class="footer-mobile-links">
-		<p class="copy">&copy; 2021 Nick Ferguson
+		{{ partial "resume.html" . }}
+		{{ partial "social.html" . }}
 	</div>
-
+	<p class="copy">&copy; 2021 Nick Ferguson</p>
 	{{ $script := resources.Get "js/main.js" | minify | fingerprint -}}
 	<script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
 </footer>

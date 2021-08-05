@@ -29,6 +29,8 @@ $sidecolor: $tagcolor;
 $sidecolor-hover: $tagcolor-hover;
 $descripcolor: $tagcolor;
 $headcolor-hover: $tagcolor-hover;
+$altlink-color: $headcolor;
+$altlink-color-hover: $headcolor-hover;
 
 /* Custom Fonts */
 $code: "PT Mono",Monaco,"Courier New",monospace;
@@ -114,7 +116,6 @@ time {
     color: $tagcolor-hover;
 }
 
-
 /* Sidebar */
 footer {
     .social-icon>svg:hover {
@@ -168,5 +169,43 @@ footer {
 	font-style: italic;
 	font-family: "Segoe UI";
 	color: $sidecolor;
-	margin-top: 2em;
+	margin-top: 3em;
+	text-align: center;
+	vertical-align: text-bottom;
+}
+
+.resume {
+	font-family: "Segoe UI";
+	text-align: center;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 16px;
+}
+
+.qrcode {
+	height: 50%;
+	width: 50%;
+}
+
+
+figcaption {
+	margin-top: 0px;
+}
+
+.resume a {
+    color: $altlink-color;
+    font-family: $fancy-headings;
+	font-size: 14px;
+}
+.resume a:visited {
+    color: $altlink-color;
+
+}
+.resume a:hover {
+    color: $altlink-color-hover;
+
+}
+.resume p {
+	margin-bottom: 1px;
 }

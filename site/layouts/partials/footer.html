@@ -1,8 +1,14 @@
 <footer class="footer">
+
 	{{ partial "social.html" . }}
-	<hr/>
+
 	{{ partial "tag-cloud.html" . }}
+	<!-- <hr style="width: 85%;"/> -->
 	<hr/>
+	<br style="margin-top: 50px;"/>
+
+	{{ partial "resume.html" . }}
+	<br style="margin-bottom: 50px;"/>
 	<p class="copy">&copy; 2021 Nick Ferguson</p>
 	{{ $script := resources.Get "js/main.js" | minify | fingerprint -}}
 	<script src="{{ $script.Permalink }}" {{ printf "integrity=%q" $script.Data.Integrity | safeHTMLAttr }} crossorigin="anonymous"></script>
