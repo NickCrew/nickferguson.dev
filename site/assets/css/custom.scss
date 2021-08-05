@@ -9,13 +9,27 @@
 $blue: #4bb3d6;
 $blue-darker: #2b7d99;
 $blue-darkest: #6b7978;
+$blue-lighter: #9fd9f2;
 $coral: #de5e5c;
-$coral-lighter: #9fd9f2;
 $orange: #d4574e;
 $accent-dark: #616060;
-$accent-medium: #daa684;
-$accent-light: #a69c8b;
+$accent-medium: #be9963;
+$accent-light: #818e89;
 $accent-lightest: #ABABAB;
+$accent-hover: #cdb072;
+
+$navcolor: #069db8;
+$navcolor-hover: #146b7a;
+//$titlecolor: #de5e5c;
+$titlecolor: #f35d65;
+$titlecolor-hover: $titlecolor;
+$headcolor-hover: #52483e;
+$headcolor: #7d756d;
+$tagcolor: #8d8d8d;
+$tagcolor-hover: #3a373c;
+$sidecolor: $tagcolor;
+$sidecolor-hover: $tagcolor-hover;
+$descripcolor: $tagcolor;
 
 /* Custom Fonts */
 $code: "PT Mono",Monaco,"Courier New",monospace;
@@ -24,15 +38,15 @@ $fancy-headings: "KoHo";
 .site-title {
 	a {
 		font-family: $fancy-headings;
-		color: $coral;
+		color: $titlecolor;
 	}
-	//a:hover {
-	//	color: $accent-medium;
-	//}
+	a:hover {
+		color: $titlecolor-hover;
+	}
 }
 
 .description {
-	color: $accent-lightest;
+	color: $descripcolor;
 }
 
 h1,
@@ -42,77 +56,74 @@ h4,
 h5,
 h6 {
     font-family: $fancy-headings;
-	color: $accent-dark; 
+	color: $headcolor; 
 
-}
-
-h1 { 
-	color: $accent-dark; 
 }
 
 h2 {
 	a {
-		color: $accent-dark;
+		color: $headcolor;
 	}
 	a:visited {
-		color: $accent-dark;
+		color: $headcolor;
 	}
 	a:hover {
-		color: $accent-medium;
+		color: $headcolor-hover;
 	}
 	
 }
 
 .color-link {
-    color: $blue;
+    color: $navcolor;
     font-family: $fancy-headings;
+	font-size: 18px;
 }
 
 .color-link:visited {
-    color: $blue;
+    color: $navcolor;
 }
 
 .color-link:hover {
-    color: $accent-medium;
+    color: $navcolor-hover;
 }
 
 .paginator {
     a {
-        color: $blue;
+        color: $navcolor;
     }
 }
 
 .tag {
-    color: $accent-light;
+    color: $tagcolor;
 }
 
 .tag:visited {
-    color: $accent-light;
+    color: $tagcolor;
 }
 
 .tag:hover {
-    color: $accent-medium;
+    color: $tagcolor-hover;
 }
 
 
 footer {
     .social-icon>svg:hover {
-        fill: $accent-medium;
+        fill: $sidecolor-hover;
     }
 	.social-icon>svg:visited {
-		color: $blue;
+		color: $sidecolor;
 
 	}
     a {
-        color: $accent-lightest;
+        color: $sidecolor;
     }
 
     a:visited {
-        color: $accent-lightest;
+        color: $sidecolor;
     }
 
     a:hover {
-        color: $accent-medium;
+        color: $sidecolor-hover;
     }
 }
 
