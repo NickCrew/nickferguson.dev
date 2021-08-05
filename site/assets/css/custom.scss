@@ -20,34 +20,20 @@ $accent-hover: #cdb072;
 
 $navcolor: #069db8;
 $navcolor-hover: #146b7a;
-//$titlecolor: #de5e5c;
 $titlecolor: #f35d65;
-$titlecolor-hover: $titlecolor;
-$headcolor-hover: #52483e;
+$titlecolor-hover: #d95960;
 $headcolor: #7d756d;
 $tagcolor: #8d8d8d;
 $tagcolor-hover: #3a373c;
 $sidecolor: $tagcolor;
 $sidecolor-hover: $tagcolor-hover;
 $descripcolor: $tagcolor;
+$headcolor-hover: $tagcolor-hover;
 
 /* Custom Fonts */
 $code: "PT Mono",Monaco,"Courier New",monospace;
 $fancy-headings: "KoHo";
 
-.site-title {
-	a {
-		font-family: $fancy-headings;
-		color: $titlecolor;
-	}
-	a:hover {
-		color: $titlecolor-hover;
-	}
-}
-
-.description {
-	color: $descripcolor;
-}
 
 h1,
 h2,
@@ -57,7 +43,6 @@ h5,
 h6 {
     font-family: $fancy-headings;
 	color: $headcolor; 
-
 }
 
 h2 {
@@ -69,10 +54,28 @@ h2 {
 	}
 	a:hover {
 		color: $headcolor-hover;
-	}
-	
+		text-decoration: none;
+	}	
 }
 
+/* Title */
+.site-title {
+	a {
+		font-family: $fancy-headings;
+		font-size: 28px;
+		color: $titlecolor;
+	}
+	a:hover {
+		color: $titlecolor-hover;
+	}
+}
+
+.description {
+	color: $descripcolor;
+}
+
+
+/* Navigation */
 .color-link {
     color: $navcolor;
     font-family: $fancy-headings;
@@ -93,6 +96,12 @@ h2 {
     }
 }
 
+
+/* Post List */
+time {
+	color: $descripcolor;
+}
+
 .tag {
     color: $tagcolor;
 }
@@ -106,14 +115,15 @@ h2 {
 }
 
 
+/* Sidebar */
 footer {
     .social-icon>svg:hover {
         fill: $sidecolor-hover;
     }
 	.social-icon>svg:visited {
 		color: $sidecolor;
-
 	}
+
     a {
         color: $sidecolor;
     }
@@ -153,3 +163,10 @@ footer {
   transition: color 250ms;
 }
 
+.copy {
+	font-size: 14px;
+	font-style: italic;
+	font-family: "Segoe UI";
+	color: $sidecolor;
+	margin-top: 2em;
+}

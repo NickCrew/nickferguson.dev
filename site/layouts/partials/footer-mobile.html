@@ -1,9 +1,10 @@
 <footer class="footer-mobile">
 	{{ partial "social.html" . }}
+	<hr/>
 	{{ partial "tag-cloud.html" . }}
-
+	<hr/>
 	<div class="footer-mobile-links">
-		<p/>
+		<p class="copy">&copy; 2021 Nick Ferguson
 	</div>
 
 	{{ $script := resources.Get "js/main.js" | minify | fingerprint -}}

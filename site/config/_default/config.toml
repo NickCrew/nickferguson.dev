@@ -1,7 +1,6 @@
 # config/_default/config.toml
 
 title	= "nickferguson.dev"
-#baseURL = "//nickferguson.dev"
 theme	= "noteworthy"
 
 LanguageCode	= "en"

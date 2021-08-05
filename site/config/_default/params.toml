@@ -1,7 +1,7 @@
 # config/_default/params.toml
 
 author = "Nick Ferguson"
-description = "It works on my machine..."
+description = "Well... It works on my machine..."
 copyright = "2021 Nick Ferguson"
 dateform = "Jan 2 2006"
 
@@ -18,13 +18,13 @@ kofi = ""
 # Main
 email = "blog@nickferguson.dev"
 linkedin = "https://linkedin.com/in/ncferguson"
-twitter = "https://twitter.com/piggahmonster"
-youtube = "https://www.youtube.com/channel/UC972wwbPrKXW-YlXCPGPbQw"
+#twitter = "https://twitter.com/piggahmonster"
+#youtube = "https://www.youtube.com/channel/UC972wwbPrKXW-YlXCPGPbQw"
 
 # Programming
 github = "https://github.com/NickCrew"
-stackoverflow = "https://stackoverflow.com/users/6569965/nicholas-ferguson"
-gitlab = "https://gitlab.com/Nickopotamus"
-codepen = "https://codepen.io/nickcrew"
+#stackoverflow = "https://stackoverflow.com/users/6569965/nicholas-ferguson"
+#gitlab = "https://gitlab.com/Nickopotamus"
+#codepen = "https://codepen.io/nickcrew"
 
 
