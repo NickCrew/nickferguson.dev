@@ -25,17 +25,17 @@
     url = "/archives/"
     weight = 20
 
-[[menu.main]]
-	name = "Series"
-	identifier = "series"
-	url = "/series/"
-	weight = 7
-
 #[[menu.main]]
-#    name = "Categories"
-#	identifier = "categories"
-#	url = "/categories/"
-#	weight = 40
+#	name = "Series"
+#	identifier = "series"
+#	url = "/series/"
+#	weight = 7
+
+[[menu.main]]
+    name = "Categories"
+	identifier = "categories"
+	url = "/categories/"
+	weight = 40
 
 
 		

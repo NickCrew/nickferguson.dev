@@ -32,7 +32,7 @@ HUGO_SSH_USER ?= root
 HUGO_SSH_HOST ?= dev1
 HUGO_SSH_CONN ?= $(HUGO_SSH_USER)@$(HUGO_SSH_HOST)
 
-POST_TYPE ?= post
+POST_TYPE ?= posts
 POST_EXTEN ?= md
 
 help:

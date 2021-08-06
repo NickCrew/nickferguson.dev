@@ -4,7 +4,7 @@ title = "Household Services Dashboard"
 date = "2021-07-30T20:25:19-04:00"
 summary = "This post shows off the [Homer](https://github.com/bastienwirtz/homer) dashboard project along with a demo of my instance."
 tags = ["docker","home lab","web"]
-series = ["Home Automation"]
+categories = ["Home Automation"]
 +++
 
 ## The first step is admitting you have a problem

@@ -9,8 +9,7 @@ tags = [
 	"unifi",
 	"synology"
 ]
-series = ["Home Automation"]
-categories = ["Tutorial"]
+categories = ["Tutorial", "Home Automation", "Lab"]
 +++
 
 
