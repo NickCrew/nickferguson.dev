@@ -33,6 +33,9 @@ $altlink-color: $headcolor;
 $altlink-color-hover: $headcolor-hover;
 
 /* Custom Fonts */
+$serif: "Noto Serif","Segoe UI","Helvetica Neue",Helvetica,Roboto,FreeSans,serif;
+$sans-serif: "Noto Sans","Segoe UI","Helvetica Neue",Helvetica,Roboto,FreeSans,sans-serif;
+
 $code: "PT Mono",Monaco,"Courier New",monospace;
 $fancy-headings: "KoHo";
 
@@ -167,7 +170,7 @@ footer {
 .copy {
 	font-size: 14px;
 	font-style: italic;
-	font-family: "Segoe UI";
+	font-family: $sans-serif;
 	color: $sidecolor;
 	margin-top: 5em;
 	text-align: center;

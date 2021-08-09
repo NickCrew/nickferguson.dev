@@ -1,8 +1,35 @@
 +++
 author = "Nick Ferguson"
 title = "About"
-date = "2021-07-04T23:42:00-04:00"
 +++
+
+I am a software engineer specializing in platform development and site reliability. I am particularly interested in finding opportunities for new buildouts and modernization efforts. It is my feeling that relationships and communication are the most powerful requirements for good software development.  
+
+I believe that curiosity and a relentless resistance to giving up can see you through almost any goal. 
+
+One of my primary aspirations is to continually improve at teaching and information sharing.  
+
+The humid and unyielding embrace of Florida suggests that I will be found around Tampa Bay, Florida for several more
+years.
+
+
+---
+
+## Bio
+
+Free software and Linux has been one of the more consistent threads woven throughout my life. 
+When I was 17 I fell into photography for a few years and built my entire post-processing workflow on free software.
+Since it would be several years after leaving high school before I started taking college classes and doing software
+development professionally, I went 15 years without ever using, seeing or caring about proprietary software or Windows
+operating systems.  
+
+The Internet was not, however, my first obession. Horses have been the other constant and for many years I viewed the
+computers as the hobby and the horses as a livelihood, perhaps because that was something that took shape so
+naturally.
+
+{{< resize-image src="twilight-1.jpg" alt="My Horse, Twilight" caption="Twilight - My favorite horse" >}}
+
+
 
 ### Fade in from Black ... *Modem Screeches Wistfully*
 
@@ -25,6 +52,9 @@ always felt a kinship with the noble badger and so it is fitting that for me, Ub
 first introduction to Linux. I immediately resolved that I would not be doing this dual-booting thing. I was not
 concerned about playing my games because I only wanted to do one thing now: use Linux. I wiped my drive and installed
 the badger.  
+
+{{< resize-image src="badger.png" alt="Breezy Badger" caption="Breezy Badger" >}}
+
 
 And everything was broken. My display resolution was stuck at 800x600, I had no audio, all the usual suspects. In fact
 what made Ubuntu revolutionary on the desktop was not that it worked so much better in the beginning, but the Ubuntu
@@ -119,7 +149,3 @@ Linux boy was I in for a treat!
 Coming from the Linux systems I pretty naturally fell into what you might call Site Reliability Engineering or Platform
 Development which basically boils down to me developing software no one's ever heard of thats used to make and ship software you've actually heard of.
 
----
-
-###
-{{< resize-image src="nick_ferguson_resume_qr_code.png" alt="Download my resume" caption="Download My Resume" >}}
