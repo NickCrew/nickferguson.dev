@@ -204,6 +204,8 @@ footer {
 
 figcaption {
 	margin-top: 0px;
+	padding-top: 0px;
+	font-style: italic;
 }
 
 .resume a {
@@ -221,5 +223,10 @@ figcaption {
 }
 .resume p {
 	margin-bottom: 1px;
+}
+
+.article-image {
+	float: right;
+	padding: 10px;
 }
 

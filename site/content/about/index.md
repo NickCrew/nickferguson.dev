@@ -3,35 +3,12 @@ author = "Nick Ferguson"
 title = "About"
 +++
 
-I am a software engineer specializing in platform development and site reliability. I am particularly interested in finding opportunities for new buildouts and modernization efforts. It is my feeling that relationships and communication are the most powerful requirements for good software development.  
+Nick is a software engineer living in Tampa Bay, Florida.  
 
-I believe that curiosity and a relentless resistance to giving up can see you through almost any goal. 
-
-One of my primary aspirations is to continually improve at teaching and information sharing.  
-
-The humid and unyielding embrace of Florida suggests that I will be found around Tampa Bay, Florida for several more
-years.
+> _Coming from the Linux systems I pretty naturally fell into what is usually thought of as Site Reliability Engineering or Platform Development. I tend to prefer the challenges offered up by build and release processes, hosting platforms and distributed systems._
 
 
----
-
-## Bio
-
-Free software and Linux has been one of the more consistent threads woven throughout my life. 
-When I was 17 I fell into photography for a few years and built my entire post-processing workflow on free software.
-Since it would be several years after leaving high school before I started taking college classes and doing software
-development professionally, I went 15 years without ever using, seeing or caring about proprietary software or Windows
-operating systems.  
-
-The Internet was not, however, my first obession. Horses have been the other constant and for many years I viewed the
-computers as the hobby and the horses as a livelihood, perhaps because that was something that took shape so
-naturally.
-
-{{< resize-image src="twilight-1.jpg" alt="My Horse, Twilight" caption="Twilight - My favorite horse" >}}
-
-
-
-### Fade in from Black ... *Modem Screeches Wistfully*
+## Fade in from Black ... *Modem Screeches Wistfully*
 
 The year was 2005 and I had moved literally to the wrong side of the tracks, but I had cable internet for the first time ever after a decade spent on 56k. The internet didn't suck yet and loading a JPEG was not a suspense-filled event. The first time I encountered Linux was a couple years prior when the old stoner that ran the dial-up ISP for our town had given me a Fedora Core CD. I was immediately drawn in by the smooth, alien icons of the GNOME desktop. Firefox was still part of The Mozilla Suite.  
 
@@ -41,10 +18,13 @@ But it was not yet meant to be. Partially due to my 56k situation and partially 
 XP felt hostile now though. I had peered through the looking glass and I _wanted_ it. I didn't have any motivation or
 reason other than an instinctual drive telling me _that_ was what I needed.  
 
-### Revival!
+## Reunited
 Once I got cable internet, and in this place where truly nothing good could come of me going outside, I was finally able
 to let the riptide that was the Internet in 2005 pull me out to sea. I was downloading things in hours that used to take
 me _weeks_! I was playing games other than Runescape! And I was seeing Linux mentioned on the forums (remember phpBB? how I long..).  
+
+> _Software engineers should to be empowered and then trusted with that power to pick the right tools and design good solutions._ 
+  
 
 Ubuntu had burst onto the scene in 2004 with the Warty Warthog in what I believe will be the only thing close to a true
 Year of the Linux desktop because no matter how you feel about Ubuntu today, it revolutionized desktop Linux. I have
@@ -53,7 +33,7 @@ first introduction to Linux. I immediately resolved that I would not be doing th
 concerned about playing my games because I only wanted to do one thing now: use Linux. I wiped my drive and installed
 the badger.  
 
-{{< resize-image src="badger.png" alt="Breezy Badger" caption="Breezy Badger" >}}
+{{< resize-image src="badger.png" alt="Breezy Badger" >}}
 
 
 And everything was broken. My display resolution was stuck at 800x600, I had no audio, all the usual suspects. In fact
@@ -64,13 +44,16 @@ first place. You knew that first and foremost, someone probably already asked ab
 someone wrote a guide about it, but that even if you had to be brave and post your question you knew you were not going
 to be torn down to your essence of shame and regret.  
 
-### Year(s) of the Linux Desktop
+## Year of the Linux Desktop
+
 Ubuntu no-doubt focused hard on usability and things like audio and media codecs, Xorg, Wi-Fi quickly became
 out-of-the-box functionality. And people loved it. You still had to earn it though. It was a battle to accomplish many
 things that were not a problem on Windows due its first-class vendor support and licensing...stuff. The Ubuntu community
 was providing a framework and encouragement that gave a dumb kid like me just enough support to stick with it and keep
 figuring stuff out. Once I figured out what the Linux kernel was, and that I needed to compile a custom version to get
 the hyper-threading working on my Pentium 4, it was on.  
+
+> _... communication, trust and relationships are critical components in delivering high-quality software._  
 
 Getting a Linux desktop that worked was the best way for a kid to learn Linux at the time. It's not like I had a job
 down at the datacenter on the corner. And if Linux had "just worked" (like it pretty much does now, lets be real), I
@@ -82,7 +65,7 @@ We were entering the Compiz Age - a period of breathtaking true transparency, ro
 
 {{< resize-image src="compiz_small.png" alt="Compiz's Rotating Desktop Cube" caption="Rotating Desktop Cube" >}}
 
-### But Can My Grandma Use it?
+## But Can My Grandma Use it?
 
 My parent have been Linux users for going on 20 years and I'm not sure they even know it. It did not take long before
 our house became 100% free and open-source. Even in those days, if you only used your computer to get online and
@@ -106,8 +89,11 @@ people I helped were out of obligation because my dad probably owed them rent or
 them. Desktop computers have sort of gone the way of the do-do lately but I still massacre a Windows install
 occasionally.  
 
+## Flashback
 
-### The Fall
+Free software and Linux has been one of the more consistent threads woven throughout my life. When I was 17 I fell into photography for a few years and built my entire post-processing workflow on free software. Since it would be several years after leaving high school before I started taking college classes and doing software development professionally, I went 15 years without ever using, seeing or caring about proprietary software or Windows operating systems.  {{< resize-image src="twilight-1.jpg" alt="My Horse, Twilight" caption="Twilight - My favorite horse" >}} The Internet was not, however, my first obession. Horses have been the other constant and for many years I viewed the computers as the hobby and the horses as a livelihood, perhaps because that was something that took shape so naturally.
+
+## The Fall
 
 My computer and Linux had been a fortress into which I had retreated when life around me was in chaos. My living
 situation had changed dramatically and structures I once thought immovable and impervious were crashing down around me.
@@ -122,7 +108,7 @@ behind my house to a slum next to train tracks. I was angsty and resentful as yo
 cable internet. Up to this point I had only my best friend Jake who I'd since first grade. He had just gotten his
 license and a girlfriend so I would occasionally find myself bored at the times I had gotten used to him being around.  
 
-### Trials and Tribulations
+## Trials and Tribulations
 
 I have had an interesting life since then and Linux has accompanied through it all in one way or another. When I was 18
 and 19 I became obsessed with photography for a while and even though Adobe apps were not difficult to obtain, I chose
@@ -132,7 +118,7 @@ My first great love, even before Linux, has been horses and I spent several year
 
 I had plucked at a guitar since I was a guitar since I was young as well and I later discovered the importance of music. I went to music festivals for a while, taking photos, and discovered the Grateful Dead, which quickly became another one of my obsessions and now is something I can't imagine living life without.  
 
-### Training Montage
+## Training Montage
 
 I was practically teleported to Florida 7 years ago (along with my cat Zippy) out of necessity. I fell into hospitality
 work for a while, doing hotel guest services and revenue management.  
@@ -144,8 +130,18 @@ All those years with Linux helped me jump in the deep end quickly (I'm more of a
 swimmer) except this time I was discovering programming. If I thought I loved bashing my head against the rock that was
 Linux boy was I in for a treat!
 
-### So what is it... that you'd say you do here?
+## So what is it... that you'd say you do here?
 
-Coming from the Linux systems I pretty naturally fell into what you might call Site Reliability Engineering or Platform
-Development which basically boils down to me developing software no one's ever heard of thats used to make and ship software you've actually heard of.
+Coming from the Linux systems I pretty naturally fell into what you might call Site Reliability Engineering or Platform Development. {{< resize-image src="office-space-1.png" alt="What would you say you do here?" style="float: left" >}} I tend to prefer the challenges offered up by build and release processes, hosting platforms and distributed systems.
+I also enjoy making software for other software engineers. A good tool is always appreciated and I like the quick customer feedback cycle. I find that I am valued for bringing my operating systems and networking background into the early development cycle.
 
+
+## Philosophy
+
+Some core tenets have established themselves in my working philosophy and the most prominent of those are that communication, trust and relationships are critical components in delivering high-quality software.  
+
+Software engineers should to be empowered and then trusted with that power to pick the right tools and design good solutions.   
+
+Positive relationships can make the whole greater than its parts and provide a source of drive and enthusiasm that harder to shake.  
+
+One of my primary aspirations is to continually improve my teaching abilities and to promote information sharing. I believe that curiosity and a relentless resistance to giving up can see you through almost any goal. 
