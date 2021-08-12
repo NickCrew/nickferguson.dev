@@ -3,10 +3,34 @@ author = "Nick Ferguson"
 title = "About"
 +++
 
-Nick is a software engineer living in Tampa Bay, Florida.  
+## Swamp King, Lord of Gators, Destroyer of Lawns and Year-Round Wearer of Hoodies
+_Nick is a software engineer living in Tampa Bay, Florida._
 
-> _Coming from the Linux systems I pretty naturally fell into what is usually thought of as Site Reliability Engineering or Platform Development. I tend to prefer the challenges offered up by build and release processes, hosting platforms and distributed systems._
+## So what is it... that you'd say you do here?
 
+I tend to prefer the challenges offered up by build and release processes, hosting platforms and distributed systems. This usually equates to work labeled as Platform Development, Site Reliability Engineering or Full Stack Development.  
+
+> _My unique value is derived from a lifetime of nerding-out on Linux systems, curiosity bordering on obession at times, and being generally known as a good communicator, teacher, and student._  
+
+My favorite projects are often new build-outs or improvement efforts. I love dragging legacy code kicking and
+screaming into the 21st century. I also enjoy making software for other software engineers. I like the quick feedback cycle and it's always nice to see others benefitting from your work. At the end of the day it's all about solving someone or something's problem with software.  
+
+Some core tenets have established themselves in my working philosophy and the most prominent of those are that communication, trust and relationships are critical components in delivering high-quality software.  
+
+
+{{< resize-image src="office-space-1.png" alt="What would you say you do here?" style="float: left" >}}
+Software engineers should to be empowered and then trusted with that power to pick the right tools and design good solutions.   
+
+Positive relationships can make the whole greater than its parts and provide a source of drive and enthusiasm that harder to shake.  
+
+One of my primary aspirations is to continually improve my teaching abilities and to promote information sharing. I believe that curiosity and a relentless resistance to giving up can see you through almost any goal. 
+
+
+--- 
+
+# A New Hope
+
+Florida is the Tatooine of America, don't you think?
 
 ## Fade in from Black ... *Modem Screeches Wistfully*
 
@@ -23,7 +47,6 @@ Once I got cable internet, and in this place where truly nothing good could come
 to let the riptide that was the Internet in 2005 pull me out to sea. I was downloading things in hours that used to take
 me _weeks_! I was playing games other than Runescape! And I was seeing Linux mentioned on the forums (remember phpBB? how I long..).  
 
-> _Software engineers should to be empowered and then trusted with that power to pick the right tools and design good solutions._ 
   
 
 Ubuntu had burst onto the scene in 2004 with the Warty Warthog in what I believe will be the only thing close to a true
@@ -52,8 +75,6 @@ things that were not a problem on Windows due its first-class vendor support and
 was providing a framework and encouragement that gave a dumb kid like me just enough support to stick with it and keep
 figuring stuff out. Once I figured out what the Linux kernel was, and that I needed to compile a custom version to get
 the hyper-threading working on my Pentium 4, it was on.  
-
-> _... communication, trust and relationships are critical components in delivering high-quality software._  
 
 Getting a Linux desktop that worked was the best way for a kid to learn Linux at the time. It's not like I had a job
 down at the datacenter on the corner. And if Linux had "just worked" (like it pretty much does now, lets be real), I
@@ -130,18 +151,4 @@ All those years with Linux helped me jump in the deep end quickly (I'm more of a
 swimmer) except this time I was discovering programming. If I thought I loved bashing my head against the rock that was
 Linux boy was I in for a treat!
 
-## So what is it... that you'd say you do here?
 
-Coming from the Linux systems I pretty naturally fell into what you might call Site Reliability Engineering or Platform Development. {{< resize-image src="office-space-1.png" alt="What would you say you do here?" style="float: left" >}} I tend to prefer the challenges offered up by build and release processes, hosting platforms and distributed systems.
-I also enjoy making software for other software engineers. A good tool is always appreciated and I like the quick customer feedback cycle. I find that I am valued for bringing my operating systems and networking background into the early development cycle.
-
-
-## Philosophy
-
-Some core tenets have established themselves in my working philosophy and the most prominent of those are that communication, trust and relationships are critical components in delivering high-quality software.  
-
-Software engineers should to be empowered and then trusted with that power to pick the right tools and design good solutions.   
-
-Positive relationships can make the whole greater than its parts and provide a source of drive and enthusiasm that harder to shake.  
-
-One of my primary aspirations is to continually improve my teaching abilities and to promote information sharing. I believe that curiosity and a relentless resistance to giving up can see you through almost any goal. 
