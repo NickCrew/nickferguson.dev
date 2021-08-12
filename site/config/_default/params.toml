@@ -1,7 +1,7 @@
 # config/_default/params.toml
 
 author = "Nick Ferguson"
-description = "Well... It works on my machine..."
+description = "It works on my machine..."
 copyright = "2021 Nick Ferguson"
 dateform = "Jan 2 2006"
 
