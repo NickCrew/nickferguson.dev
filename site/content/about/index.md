@@ -3,34 +3,34 @@ author = "Nick Ferguson"
 title = "About"
 +++
 
-## Swamp King, Lord of Gators, Destroyer of Lawns and Year-Round Wearer of Hoodies
-_Nick is a software engineer living in Tampa Bay, Florida._
 
 ## So what is it... that you'd say you do here?
 
-I tend to prefer the challenges offered up by build and release processes, hosting platforms and distributed systems. This usually equates to work labeled as Platform Development, Site Reliability Engineering or Full Stack Development.  
+I like making software development and deployment tools. Creating reliable hosting platforms also offers up a lot of problems that I'll be drawn too. It might come from my digital photography history, but I even like working on user interfaces and design. And Linux system internals will always be close to my heart.  
 
-> _My unique value is derived from a lifetime of nerding-out on Linux systems, curiosity bordering on obession at times, and being generally known as a good communicator, teacher, and student._  
+So, everything, I guess?  
 
-My favorite projects are often new build-outs or improvement efforts. I love dragging legacy code kicking and
-screaming into the 21st century. I also enjoy making software for other software engineers. I like the quick feedback cycle and it's always nice to see others benefitting from your work. At the end of the day it's all about solving someone or something's problem with software.  
-
-Some core tenets have established themselves in my working philosophy and the most prominent of those are that communication, trust and relationships are critical components in delivering high-quality software.  
-
-
+I've always tried to avoid any unecessary constraints, labels or boxes which is sometimes out odds with industry, ironically, despite the expectations you can encounter.
 {{< resize-image src="office-space-1.png" alt="What would you say you do here?" style="float: left" >}}
-Software engineers should to be empowered and then trusted with that power to pick the right tools and design good solutions.   
+It has been my experience that relationships, communication, and trust are critical to good software development, but many times it's only the absence that's noticed.  
 
-Positive relationships can make the whole greater than its parts and provide a source of drive and enthusiasm that harder to shake.  
+I think that is doubly true if you are working in build and release, site reliability or platform development because you will often have an outsized impact on the experience many engineers through
+your design of development tools, processes, standards, and conventions. After those things are implemented you also have to protect them. That means you will inevitably have to say "no" to someome or stand up for a position.  
 
-One of my primary aspirations is to continually improve my teaching abilities and to promote information sharing. I believe that curiosity and a relentless resistance to giving up can see you through almost any goal. 
+One part of trust is that software engineers should be empowered and then trusted with that power to pick the right tools and design good solutions.   
+
+Teaching, mentoring, and technical writing skills are also required in any software team. Unfortunately, their quality varies wildly. I have benefitted from good mentorship and while it may not be absolutely required, it undoubtedly makes the early professional experience less daunting and more well-rounded. Most of what I learned from my first mentor that I really value were not so much technical but were about the realities of professional software engineering, beaurocracy and politics, and our role in an organization in relation to the bottom line.  
+
+I'm not sure what it would look like, but it would be nice to see some focus on these "soft skills" as part of an engineering education. I think we probably expect that most of these things are by-products of institutionalized education but if that is true it is likely too lacking in context.  
+
+One thing is for sure: You are responsible for your own education and you will need to ensure it does not stagnate if you want to make a living out of software engineering. Curiosity is the most important attribute to a good programmer, in my opinion, and I think if you can maintain that curiosity and find places that provide motivation and excitement, you will always have plenty of work creating software.
 
 
 --- 
 
 # A New Hope
 
-Florida is the Tatooine of America, don't you think?
+Florida is the Tatooine of America.
 
 ## Fade in from Black ... *Modem Screeches Wistfully*
 
