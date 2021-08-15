@@ -8,8 +8,8 @@ HUGO_THEME ?= noteworthy
 HUGO_VERSION ?= 0.86.1
 
 TMPDIR ?= /tmp
-BASE_DIR=$(shell pwd)
-HUGO_SRC_DIR ?= $(BASE_DIR)/site
+HUGO_BASE_DIR=$(shell pwd)
+HUGO_SRC_DIR ?= $(HUGO_BASE_DIR)/site
 HUGO_CONFIG_DIR ?= $(HUGO_SRC_DIR)/config
 HUGO_THEMES_DIR ?= $(HUGO_SRC_DIR)/themes
 HUGO_CONTENT_DIR ?= $(HUGO_SRC_DIR)/content

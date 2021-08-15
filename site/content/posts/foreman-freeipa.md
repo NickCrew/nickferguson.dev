@@ -4,15 +4,14 @@ title = "Foreman and FreeIPA Realm Integration"
 date = "2021-04-10"
 summary = "Integrate Foreman + Katello (Red Hat Satellite) and FreeIPA (Red Hat ID Mgmt. ) for host life cycle management and local DNS, SSO, and file sharing."
 tags = [
-    "foreman",
 	"linux",
-	"katello",
-	"freeipa",
 	"red hat",
-	"dns"
+	"dns",
+	"virtualization",
+	"infrastructure"
 ]
 categories = [
-	"Tutorial"
+	"Tutorials"
 ]
 +++
 

@@ -1,15 +1,17 @@
 +++
 author = "Nick Ferguson"
-title = "Home Lab Tour"
+title = "Home Lab Tour Part 1: Introduction"
 date = "2021-06-01"
 summary = "A high-level tour of the domestic platform that supports my over-engineered home automation and development labs."
 tags = [
-    "home lab",
+	"infrastructure",
+	"virtualization",
 	"networking",
 	"unifi",
 	"synology"
 ]
-categories = ["Tutorial", "Home Automation", "Lab"]
+categories = ["Home Lab"]
+series = ["Home Lab Tour"]
 +++
 
 

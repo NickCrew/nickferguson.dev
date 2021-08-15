@@ -4,7 +4,7 @@ title = "Fancy Git Log"
 date = "2021-08-04T01:22:15-04:00"
 description = "Use Git aliases to create the fanciest of git logs"
 tags = ["git","linux","programming"]
-categories = ["Tutorial"]
+categories = ["Tutorials"]
 +++
 
 At least two things are true of programmers: they have the memory of a gold fish and instead put all of their energy into minimizing the time it takes to look-up or invoke the same crap 5000 times and they love showing off sick, colorful terminal output.

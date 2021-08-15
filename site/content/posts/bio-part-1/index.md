@@ -1,8 +1,14 @@
 +++
 author = "Nick Ferguson"
-title = "Bio"
+title = "Bio Part 1: Linux Discovery"
+date = "2021-08-15"
+summary = "First post of a series on my favorite topic (me) where I explain how I got started with Linux."
+tags = ["linux"]
+series = ["Bio"]
+categories = ["Personal"]
 +++
 
+_Part 1 of my [Bio Series](/series/bio)_
 
 ## Fade in from Black ... *Modem Screeches Wistfully*
 

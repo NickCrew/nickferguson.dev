@@ -3,8 +3,8 @@ author = "Nick Ferguson"
 title = "Automated Media Management"
 date = "2021-07-23"
 summary = "A repo with instructions for automating tracking and downloading of movies, TV, music and eBooks along with friendly frontends for browsing and requesting new content. Based on the *arr apps and Calibre eBook manager."
-tags = ["docker","sonarr","radarr","media"]
-categories = ["Home Automation"]
+tags = ["docker","pvr","entertainment","home automation"]
+categories = ["Tutorials"]
 +++
 
 A repo to assist in quickly getting an automated PVR system up and running.

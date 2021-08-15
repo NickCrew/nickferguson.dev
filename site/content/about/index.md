@@ -1,19 +1,25 @@
 +++
 author = "Nick Ferguson"
-title = "About"
+title = "About Me"
 +++
 
+I'm Nick Ferguson and I currently work at [Vispero](https://vispero.com), where I lead the design and development of the software build and release platform.
 
-## So what is it... that you'd say you do here?
+I'm originally from Ohio, where I worked as a horse trainer in an attempt to make a career of the only thing I like more than computers. These days I live in Tampa Bay, Florida, which has grown on me since acclimating and becoming one of those people wearing hoodies when its 70 degrees.  
 
-I like making software development and deployment tools. Creating reliable hosting platforms also offers up a lot of problems that I'll be drawn too. It might come from my digital photography history, but I even like working on user interfaces and design. And Linux system internals will always be close to my heart.  
+I have had a love and curiosity for Linux since I was a kid that has always remained interesting to follow. As a
+software engineer now, that background has led me to be primarily interested in virtual infrastructure, distributed systems, hosting platforms and site reliability, build and release processes and development tools.  
 
-So, everything, I guess?  
 
-I've always tried to avoid any unecessary constraints, labels or boxes which is sometimes out odds with industry, ironically, despite the expectations you can encounter.
-{{< resize-image src="office-space-1.png" alt="What would you say you do here?" style="float: left" >}}
+_Read more about me and my enthralling adventures in my [Bio Series](/series/bio)._
+
+--- 
+
+## Hey is that a soapbox?...
+
 It has been my experience that relationships, communication, and trust are critical to good software development, but many times it's only the absence that's noticed.  
 
+{{< resize-image src="office-space-1.png" alt="What would you say you do here?" style="float: left" >}}
 I think that is doubly true if you are working in build and release, site reliability or platform development because you will often have an outsized impact on the experience many engineers through
 your design of development tools, processes, standards, and conventions. After those things are implemented you also have to protect them. That means you will inevitably have to say "no" to someome or stand up for a position.  
 
@@ -25,6 +31,3 @@ I'm not sure what it would look like, but it would be nice to see some focus on 
 
 One thing is for sure: You are responsible for your own education and you will need to ensure it does not stagnate if you want to make a living out of software engineering. Curiosity is the most important attribute to a good programmer, in my opinion, and I think if you can maintain that curiosity and find places that provide motivation and excitement, you will always have plenty of work creating software.
 
---- 
-
-Read more on [my bio]("/bio.md")

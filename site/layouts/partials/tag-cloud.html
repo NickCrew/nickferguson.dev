@@ -9,7 +9,7 @@
   {{ $fontSpread := sub $largestFontSize $smallestFontSize }}
   {{ $max := add (len (index $.Site.Taxonomies.tags.ByCount 0).Pages) 1 }}
   {{ $min := len (index $.Site.Taxonomies.tags.ByCount.Reverse 0).Pages }}
-  {{ $spread := sub $max $min }}
+  {{ $spread := 9 }}
   {{ $fontStep := div $fontSpread $spread }}
   <ul class="tag-cloud-item">
 	{{ range $name, $taxonomy := $.Site.Taxonomies.tags }}
