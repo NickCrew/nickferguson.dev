@@ -27,10 +27,12 @@ HUGO_BIND_ADDR ?= 127.0.0.1
 HUGO_BASE_URL ?= //localhost:$(HUGO_PORT)
 HUGO_APPEND_PORT ?= true
 
-HUGO_SSH_TARGET_DIR ?= /var/www/$(HUGO_SITE_NAME)
+HUGO_SSH_TARGET_DIR ?= /var/www/html
 HUGO_SSH_USER ?= root
-HUGO_SSH_HOST ?= dev1
+HUGO_SSH_HOST ?= nickferguson.dev
 HUGO_SSH_CONN ?= $(HUGO_SSH_USER)@$(HUGO_SSH_HOST)
+HUGO_SSH_OWNER ?= $(HUGO_SSH_USER)
+HUGO_SSH_GROUP ?= $(HUGO_SSH_USER)
 
 POST_TYPE ?= posts
 POST_EXTEN ?= md
@@ -66,7 +68,8 @@ package:
 	zip $(HUGO_PACKAGE_OUTPUT) $(HUGO_BUILD_OUTPUT)
 
 deploy:
-	rsync -avh \
+	rsync -avhog \
+		--chown=$(HUGO_SSH_OWNER):$(HUGO_SSH_GROUP) \
 		"$(HUGO_BUILD_OUTPUT)/" \
 		$(HUGO_SSH_CONN):$(HUGO_SSH_TARGET_DIR)/ \
 		--delete \
