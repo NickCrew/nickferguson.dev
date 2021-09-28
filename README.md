@@ -64,6 +64,17 @@ Performed via rsync over SSH.  The `HUGO_SSH_CONN` defines the remote connection
 make deploy
 ````
 
+### Github Actions Deploy
+
+Uses [this container](https://github.com/shimataro/ssh-key-action) for SSH keys.  
+
+`SSH_CONFIG`:
+````
+Host hugo-blog
+    Hostname 0.0.0.0
+	User root
+````
+
 ### Package Public Html
 
 Create a zip archive of `HUGO_BUILD_OUTPUT`.
