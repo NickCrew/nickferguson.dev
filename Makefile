@@ -30,9 +30,9 @@ HUGO_APPEND_PORT ?= true
 HUGO_SSH_TARGET_DIR ?= /var/www/html
 HUGO_SSH_USER ?= root
 HUGO_SSH_HOST ?= nickferguson.dev
-HUGO_SSH_CONN ?= $(HUGO_SSH_USER)@$(HUGO_SSH_HOST)
-HUGO_SSH_OWNER ?= $(HUGO_SSH_USER)
-HUGO_SSH_GROUP ?= $(HUGO_SSH_USER)
+HUGO_SSH_CONN ?= hugo-blog
+HUGO_WWW_OWNER ?= root
+HUGO_WWW_GROUP ?= root
 
 POST_TYPE ?= posts
 POST_EXTEN ?= md
@@ -57,7 +57,8 @@ serve:
 		--baseURL=$(HUGO_BASE_URL) \
 		--bind=$(HUGO_BIND_ADDR) \
 		--appendPort=$(HUGO_APPEND_PORT) \
-		--disableFastRender
+		--disableFastRender \
+		--noHTTPCache
 
 build:
 	/usr/local/bin/hugo --source $(HUGO_SRC_DIR) \
@@ -69,7 +70,7 @@ package:
 
 deploy:
 	rsync -avhog \
-		--chown=$(HUGO_SSH_OWNER):$(HUGO_SSH_GROUP) \
+		--chown=$(HUGO_WWW_OWNER):$(HUGO_WWW_GROUP) \
 		"$(HUGO_BUILD_OUTPUT)/" \
 		$(HUGO_SSH_CONN):$(HUGO_SSH_TARGET_DIR)/ \
 		--delete \
