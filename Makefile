@@ -5,7 +5,7 @@
 HUGO_SITE_NAME ?= nickferguson.dev
 
 HUGO_THEME ?= noteworthy
-HUGO_VERSION ?= 0.86.1
+HUGO_VERSION ?= 0.88.1
 
 TMPDIR ?= /tmp
 HUGO_BASE_DIR=$(shell pwd)
@@ -82,6 +82,13 @@ install-hugo:
 	tar --extract --file=hugo.tar.gz hugo 
 	mv hugo /usr/local/bin/hugo
 	rm hugo.tar.gz
+
+install-hugo-go:
+	mkdir -p $HOME/src
+	cd $HOME/src
+	git clone https://github.com/gohugoio/hugo.git
+	cd hugo
+	go install
 
 new-single-post:
 	hugo --source "$(HUGO_SRC_DIR)" \
