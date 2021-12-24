@@ -31,12 +31,6 @@
 	url = "/tags/"
 	weight = 41
 
-[[menu.main]]
-    name = "Photography"
-	identifier = "photography"
-	url = "/photos/"
-	weight = 60
-
 #[[menu.main]]
 #    name = "Categories"
 #	identifier = "categories"
