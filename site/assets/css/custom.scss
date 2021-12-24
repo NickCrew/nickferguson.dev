@@ -18,17 +18,17 @@ $accent-light: #818e89;
 $accent-lightest: #ABABAB;
 $accent-hover: #cdb072;
 
-$navcolor: #317b88;
-$navcolor-hover: #13313f;
-$titlecolor: #d82031;
-$titlecolor-hover: #d82031;
-$headcolor: #7d756d;
-$tagcolor: #8d8d8d;
-$tagcolor-hover: #3a373c;
+$navcolor: #46b1c9;
+$navcolor-hover: #eab464;
+$titlecolor: #f15156;
+$titlecolor-hover: $titlecolor;
+$headcolor: $navcolor;
+$headcolor-hover: $navcolor-hover;
+$tagcolor: #6d6875;
+$tagcolor-hover: #baab68;
 $sidecolor: $tagcolor;
 $sidecolor-hover: $tagcolor-hover;
 $descripcolor: $tagcolor;
-$headcolor-hover: $tagcolor-hover;
 $altlink-color: $headcolor;
 $altlink-color-hover: $headcolor-hover;
 

@@ -3,8 +3,7 @@ author = "Nick Ferguson"
 title = "About Me"
 +++
 
-I'm Nick Ferguson, a senior engineer at [Vispero](https://vispero.com), where I've been leading efforts to
-modernize the software development platform.  
+I'm Nick Ferguson, a senior engineer at [Vispero](https://vispero.com), where I've been working on the modernization of the the software development platform.  
 
 Most of my interests relate to platform engineering, site reliability, and web development.  
 
