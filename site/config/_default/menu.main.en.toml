@@ -31,6 +31,11 @@
 	url = "/tags/"
 	weight = 41
 
+[[menu.main]]
+  name = "Art Portfolio"
+  url = "https://ferguson.photos"
+  weight = 99
+
 #[[menu.main]]
 #    name = "Categories"
 #	identifier = "categories"

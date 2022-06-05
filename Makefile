@@ -5,7 +5,7 @@
 HUGO_SITE_NAME ?= nickferguson.dev
 
 HUGO_THEME ?= noteworthy
-HUGO_VERSION ?= 0.88.1
+HUGO_VERSION ?= 0.96.0
 
 TMPDIR ?= /tmp
 HUGO_BASE_DIR=$(shell pwd)
@@ -52,7 +52,8 @@ watch:
 
 
 serve:
-	hugo server --source site \
+	hugo server \
+		--source site \
 		--port=$(HUGO_PORT) \
 		--baseURL=$(HUGO_BASE_URL) \
 		--bind=$(HUGO_BIND_ADDR) \
@@ -86,9 +87,6 @@ install-hugo:
 install-hugo-go:
 	mkdir -p $HOME/src
 	cd $HOME/src
-	git clone https://github.com/gohugoio/hugo.git
-	cd hugo
-	go install
 
 new-single-post:
 	hugo --source "$(HUGO_SRC_DIR)" \

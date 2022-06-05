@@ -2,7 +2,7 @@
 
 author = "Nick Ferguson"
 description = "It works on my machine..."
-copyright = "2021 Nick Ferguson"
+copyright = "2022 Nick Ferguson"
 dateform = "Jan 2 2006"
 
 math = true
@@ -18,11 +18,12 @@ kofi = ""
 # Main
 email = "blog@nickferguson.dev"
 linkedin = "https://linkedin.com/in/ncferguson"
-twitter = "https://twitter.com/piggahmonster"
-#youtube = "https://www.youtube.com/channel/UC972wwbPrKXW-YlXCPGPbQw"
-
-# Programming
 github = "https://github.com/NickCrew"
+instagram = "https://instagram.com/wildbearattak"
+twitter = "https://twitter.com/piggahmonster"
+behance = "https://www.behance.net/nicholaferguso1"
+#youtube = "https://www.youtube.com/channel/UC972wwbPrKXW-YlXCPGPbQw"
+# Programming
 #stackoverflow = "https://stackoverflow.com/users/6569965/nicholas-ferguson"
 #gitlab = "https://gitlab.com/Nickopotamus"
 #codepen = "https://codepen.io/nickcrew"
