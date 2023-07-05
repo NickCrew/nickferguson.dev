@@ -6,6 +6,7 @@ HUGO_SITE_NAME ?= nickferguson.dev
 
 HUGO_THEME ?= noteworthy
 HUGO_VERSION ?= 0.96.0
+HUGO_OS ?= macOS
 
 TMPDIR ?= /tmp
 HUGO_BASE_DIR=$(shell pwd)
@@ -20,7 +21,7 @@ HUGO_BUILD_ENV ?= production
 HUGO_BUILD_OUTPUT ?= $(HUGO_HTML_DIR)
 HUGO_PACKAGE_OUTPUT ?= nickferguson.dev-public.zip
 HUGO_INSTALL_DIR ?= /usr/local/bin
-HUGO_RELEASE_TARBALL_URL="https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_Linux-64bit.tar.gz"
+HUGO_RELEASE_TARBALL_URL="https://github.com/gohugoio/hugo/releases/download/v$(HUGO_VERSION)/hugo_$(HUGO_VERSION)_$(HUGO_OS)-64bit.tar.gz"
 
 HUGO_PORT ?= 13131
 HUGO_BIND_ADDR ?= 127.0.0.1
@@ -28,8 +29,6 @@ HUGO_BASE_URL ?= //localhost:$(HUGO_PORT)
 HUGO_APPEND_PORT ?= true
 
 HUGO_SSH_TARGET_DIR ?= /var/www/html
-HUGO_SSH_USER ?= root
-HUGO_SSH_HOST ?= nickferguson.dev
 HUGO_SSH_CONN ?= hugo-blog
 HUGO_WWW_OWNER ?= root
 HUGO_WWW_GROUP ?= root
@@ -62,7 +61,7 @@ serve:
 		--noHTTPCache
 
 build:
-	/usr/local/bin/hugo --source $(HUGO_SRC_DIR) \
+	hugo --source $(HUGO_SRC_DIR) \
 		--environment $(HUGO_BUILD_ENV) \
 		--cleanDestinationDir
 
@@ -71,7 +70,6 @@ package:
 
 deploy:
 	rsync -avhog \
-		--chown=$(HUGO_WWW_OWNER):$(HUGO_WWW_GROUP) \
 		"$(HUGO_BUILD_OUTPUT)/" \
 		$(HUGO_SSH_CONN):$(HUGO_SSH_TARGET_DIR)/ \
 		--delete \

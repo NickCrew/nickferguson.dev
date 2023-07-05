@@ -1,3 +1,4 @@
 *.log
 hugo
 **/public/
+site/.hugo_build.lock

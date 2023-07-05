@@ -32,8 +32,8 @@
 	weight = 41
 
 [[menu.main]]
-  name = "Art Portfolio"
-  url = "https://ferguson.photos"
+  name = "Photography"
+  url = "https://ncrew.art"
   weight = 99
 
 #[[menu.main]]

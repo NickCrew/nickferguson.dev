@@ -1,8 +1,8 @@
 +++
 author = "Nick Ferguson"
-title = "Bits of My Life - Part 1: Linux Discovery"
+title = "Bits of My Life I"
 date = "2021-08-15"
-summary = "First post of a series on my favorite topic (me) where I explain how I got started with Linux."
+summary = "First post in a series where I reflect on the early years..."
 tags = ["linux", "life"]
 series = ["Bits of My Life"]
 categories = ["Personal"]
