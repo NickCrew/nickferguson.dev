@@ -47,12 +47,12 @@ clean:
 	rm -rf $(HUGO_HTML_DIR)/* 2>/dev/null
 
 watch:
-	hugo watch --source "$(HUGO_SRC_DIR)"
+	hugo watch --source ./site
 
 
 serve:
 	hugo server \
-		--source site \
+		-s ./site \
 		--port=$(HUGO_PORT) \
 		--baseURL=$(HUGO_BASE_URL) \
 		--bind=$(HUGO_BIND_ADDR) \
@@ -61,16 +61,14 @@ serve:
 		--noHTTPCache
 
 build:
-	hugo --source $(HUGO_SRC_DIR) \
-		--environment $(HUGO_BUILD_ENV) \
-		--cleanDestinationDir
+	hugo -s ./site -e production --cleanDestinationDir
 
 package:
 	zip $(HUGO_PACKAGE_OUTPUT) $(HUGO_BUILD_OUTPUT)
 
 deploy:
 	rsync -avhog \
-		"$(HUGO_BUILD_OUTPUT)/" \
+		"./site/public/" \
 		$(HUGO_SSH_CONN):$(HUGO_SSH_TARGET_DIR)/ \
 		--delete \
 		--log-file=rsync.log
@@ -81,17 +79,3 @@ install-hugo:
 	tar --extract --file=hugo.tar.gz hugo 
 	mv hugo /usr/local/bin/hugo
 	rm hugo.tar.gz
-
-install-hugo-go:
-	mkdir -p $HOME/src
-	cd $HOME/src
-
-new-single-post:
-	hugo --source "$(HUGO_SRC_DIR)" \
-		new $(POST_TYPE)/$(POST_NAME).$(POST_EXTEN)
-
-new-page-bundle:
-	mkdir -p $(HUGO_CONTENT_DIR)/post/$(POST_NAME)
-	hugo --source "$(HUGO_SRC_DIR)" \
-		new post/$(POST_NAME)/index.md \
-		--editor vim
