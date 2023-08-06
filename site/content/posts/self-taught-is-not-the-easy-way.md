@@ -4,7 +4,8 @@ title = "Self Taught Is Not the Easy Way"
 date = "2023-07-03T03:30:21-04:00"
 summary = "My opinion on formal education and why being self-taught is not the easy path."
 tags = ["programming", "career", "education", "bio"]
-categories = ["Articles"]
+series = ["Career"]
+categories = ["Articles", "Opinion"]
 +++
 
 *__Disclaimer__: I do not have a traditional background or much formal education at all past high-school.*

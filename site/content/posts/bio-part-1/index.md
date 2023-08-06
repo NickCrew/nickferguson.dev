@@ -4,8 +4,8 @@ title = "Bits of My Life I"
 date = "2021-08-15"
 summary = "First post in a series where I reflect on the early years..."
 tags = ["linux", "life"]
-series = ["Bits of My Life"]
 categories = ["Personal"]
+draft = true
 +++
 
 Part 1 of my _[Bits of My Life](/series/bio)_ series.

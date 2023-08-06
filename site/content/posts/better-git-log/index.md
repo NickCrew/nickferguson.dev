@@ -1,6 +1,6 @@
 +++
 author = "Nick Ferguson"
-title = "Fancy Git Log"
+title = "Look cool with these sick Git configs"
 date = "2021-08-04T01:22:15-04:00"
 description = "Use Git aliases to create the fanciest of git logs"
 tags = ["git","linux","programming"]
@@ -13,7 +13,8 @@ Let's combine the twisted incantations used to invoke beautiful git logs with th
 
 --- 
 
-## Street (nerd) Cred
+
+## Fancy Log 
 
 The git log is awesome. It shows you all the terrible mistakes and feverish attempts to correct them throughout the life of a project.   
 
@@ -22,9 +23,6 @@ The git log is awesome. It shows you all the terrible mistakes and feverish atte
 
 It's pretty nice on its own with a simple `git log` but lets be real, you cannot let this obviously stock output print to your terminal or everyone will know what a noob you are.  
 
-## Who Needs Money or Sweet Car
-
-... When you can do this
 
 {{< resize-image src="lg2_cap.png" alt="Fancy Git Log Output" caption="Fancy Git Log w/ Branch Graph" >}}
 
@@ -55,35 +53,109 @@ Launch VS Code and go have a coffee while it starts or gather what dignity you h
 
 Change `lg1` and `lg2` to whatever you want since I know you have a way more creative and informative descriptor than 1 and 2 (enjoy it while it lasts).  
 
-## Low-Effort Dump
+## Aliases
 
 Here are the other kick-ass git aliases I'm using
 
 ````bash
-# ~/.gitconfig
+# vim: ft=gitconfig
+# ~/.config/git/alias
 
 [alias]
-     l = log --pretty=oneline -n 5
-     ci = commit
-     pu = push
-     pl = pull
-     fe = fetch
-     co = checkout
-     cob = checkout -b
-     undo = reset HEAD~1 --mixed
-     amend = git commit -a --amend
-     unstage = reset HEAD --
-     last = log -1 HEAD
-     st = status
-     cm = !git add -A && git commit -m
-     up = !git pull --rebase --prune $@ && git submodule update --init --recursive
-     wipe = !git add -A && git commit -qm  WIPE SAVEPOINT  && git reset HEAD~1 --hard
-     p4 = !git-p4.py
-     root = rev-parse --show-toplevel
-     lch = log -n 1 --pretty=format:'%H'
+	a = add
+	st = status -sb
+	fresh = !"git clean -x -d -f"
+
+	# Worktrees
+	wt = worktree
+	lswt = worktree list
+	mkwt = "!f() { git worktree add \"$(git rev-parse --show-toplevel)+$@\"; }; f"
+	rmwt = "!f() { git worktree remove \"$(git rev-parse --show-toplevel)+$@\"; }; f"
+
+	# Commits
+	c = commit
+	ca = commit -a
+	cm = commit -m
+	cam = commit -am
+
+	# Branches
+	pu = push                           
+	pl = pull                           
+	fe = fetch                          
+	co = checkout                       
+	cob = checkout -b					
+
+	# Diff and Merge
+	cp = cherry-pick
+	mmm = !git fetch origin master && git merge origin/master --no-edit
+	d = diff
+	dt = difftool
+	dtg = !"git difftool -g"
+	dtlast = !"git difftool HEAD@{1}"
+
+	# Work-in-progress
+	wip = !git add -A && git commit -m 'WIP'
+
+	# Drop current changes
+	drop = !git stash && git stash drop
+
+	# revert last commit
+	undo = reset HEAD~1 --mixed  		
+
+	# revert added files 
+	unstage = reset HEAD --      		
+	ua = reset HEAD
+
+	# revert all modifications
+	rev = reset HEAD~1 --hard        
+
+	# add and commit all changed files
+	cm = !git add -A && git commit -m   
+
+	# Update including submodules
+	up = !git pull --rebase --prune $@ && git submodule update --init --recursive  
+
+	# Total obliteration
+	wipe = !git add -A && git commit -qm  WIPE SAVEPOINT  && git reset HEAD~1 --hard
+
+	# Compact and readable log
+	l = log --graph --pretty=format:'%C(magenta)%h%C(blue)%d%Creset %s %C(blue bold)- %an, %ar%Creset'
+
+	# Log with list of changed files for each commit
+	ll = log --stat --abbrev-commit
+
+	# List of my own commits
+	my = !git log --branches=* --no-merges --pretty=format:'%C(reset)%C(bold)%cd %C(reset)%C(white)%s  %C(reset)%h' --date=short --author=\"$(git config user.name)\"
+
+	# pick a default log style
+	lg = log --graph --decorate --oneline --abbrev-commit
+
+	# List of branches ordered by last change
+	branches = for-each-ref --sort=-committerdate refs/heads/ --format='%(color:bold)%(refname:short)%(color:reset)\t%(committerdate:relative)'
+
+	# show last commit in directory
+	slc = !"git show $(git lcd)"  
+
+	# Last modified by
+	lum = log -s -n1 --pretty='format:%an %ae%n'
+
+	# List of files with merge conflicts
+	wtf = diff --name-only --diff-filter=U
+
+	# Rebase: add changes and continue
+	cont = !git add . && git rebase --continue
+
+	# Rebase: skip a rebase step
+	skip = rebase --skip
+
+	# Rebase: abort
+	abort = rebase --abort
+
+	# Cancel local commits in the branch: git fuck master
+	fuck = "!f() { git reset --hard origin/$1; }; f"	
+
+
 ````
 
-## Disclaimer and Credit
-
-I shamelessly stole or adapted almost everything here from some other nerds at various times. If I could give a better attribution than that I would. 
+_I shamelessly stole or adapted almost everything here from some other nerds at various times. If I could give a better attribution than that I would._
 

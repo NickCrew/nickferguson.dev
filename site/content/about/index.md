@@ -1,21 +1,17 @@
 +++
 author = "Nick Ferguson"
-title = "About Me"
+title = "Hi, I'm Nick Ferguson ..."
 +++
 
-__Hi, I'm Nick Ferguson.__  
+### Professional Summary
 
-I'm a professional software engineer specializing in Linux infrastructure, distributed systems and platform development.  
+I am a professional software engineer specializing in platforms and infrastructure. 
 
-I also do photography on a semi-professional basis, primarily fine art, portraiture and fasion. Lately I've taken up inkjet printing and custom framing. [View my online portfolio](https://ferguson.photos).    
+I compiled my first Linux kernel when I was 13 to take advantage of Hyper Threading on my new Pentium 4.  
 
-I have been working at [ThreatX](https://threatx.com), an API security startup, since the start of this year, on their _Performance and Reliability Team_.  
+In the past I have worked as a full-time portrait photographer, trained performance quarter horses and managed guest services at a destination hotel.
 
-Before that, I was with [Vispero](https://vispero.com), a leader in blind and low-vision accessilibility technology, since 2018.  
-
-I specialize in platform development, full-stack web development, and building distributed Linux-based systems and networks.  
-
----
-
-Read more about me, my career and other enthralling adventures in the _[Bits of My Life](/series/bio)_ series.
+I still do photography on the side, along with inkjet printmaking and custom finishing.  
+  
+[View my portfolio](https://ferguson.photos).    
 

@@ -31,15 +31,15 @@
 	url = "/tags/"
 	weight = 41
 
+
+[[menu.main]]
+    name = "Categories"
+	identifier = "categories"
+	url = "/categories/"
+	weight = 50
+
 [[menu.main]]
   name = "Photography"
   url = "https://ncrew.art"
   weight = 99
-
-#[[menu.main]]
-#    name = "Categories"
-#	identifier = "categories"
-#	url = "/categories/"
-#	weight = 50
-
 

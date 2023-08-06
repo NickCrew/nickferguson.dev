@@ -2,6 +2,7 @@
 author = "Nick Ferguson"
 title = "Automated Media Management"
 date = "2021-07-23"
+draft = true
 summary = "A repo with instructions for automating tracking and downloading of movies, TV, music and eBooks along with friendly frontends for browsing and requesting new content. Based on the *arr apps and Calibre eBook manager."
 tags = ["docker","pvr","entertainment","home automation"]
 categories = ["Tutorials"]
@@ -14,7 +15,7 @@ A repo to assist in quickly getting an automated PVR system up and running.
 ## References
 
 - [WikiArr](https://wiki.servarr.com/)
-- [NickCrew/home-auto-media](https://github.com/NickCrew/home-auto-media.git)
+- [NickCrew/auto-htpc](https://github.com/NickCrew/auto-htpc)
 
 ---
 
@@ -78,7 +79,7 @@ I have not used this container/client combo, but it looks like it would suffice 
 
 Clone the repository to get started
 ````bash
-git clone https://github.com/NickCrew/home-auto-media.git
+git clone https://github.com/NickCrew/auto-htpc.git
 ````
 
 > All commands given are relative to the top-level repo directory
@@ -173,7 +174,7 @@ You will probably want to push back to your repo.
 You can skip the first step if you don't wish to preserve this repo as an upstream remote.
 
 ````bash
-git remote add upstream https://github.com/NickCrew/home-auto-media.git
+git remote add upstream https://github.com/NickCrew/auto-htpc.git
 git remote set-url origin <your_git_remote_url>
 git fetch
 git push -u origin master

@@ -4,8 +4,8 @@ title = "Bits of My Life II"
 date = "2022-06-05"
 summary = "Second post in the series about my first jobs and experience with school."
 tags = ["linux", "career", "education", "photography"]
-series = ["Bits of My Life"]
 categories = ["Personal"]
+draft = true
 +++
 
 Part 2 of the _[Bits of My Life](/series/bio)_ series
